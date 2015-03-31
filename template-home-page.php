@@ -1,6 +1,7 @@
-<?php  /* Template Name: Template Home Page */  get_header(); ?>  
+                                <?php  /* Template Name: Template Home Page */  get_header(); ?> 
+<div id="dvLoading"></div> 
 <main role="main">
-<div id="slider" class="bxsliderWrapper hide">
+<div id="slider" class="bxsliderWrapper" style="display:none;">
     <?php
     $myposts = get_posts('numberposts=15&category_name=Featured');
     foreach($myposts as $post) : ?>
@@ -16,3 +17,4 @@
     </div>
     </main>
 <?php get_footer(); ?>
+                            
