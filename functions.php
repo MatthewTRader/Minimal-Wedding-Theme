@@ -425,7 +425,7 @@ function create_post_type_html5()
             'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
             'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
         ),
-        'public' => true,
+        'public' => false,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => true,
         'supports' => array(
