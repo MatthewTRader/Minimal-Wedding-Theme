@@ -11,6 +11,7 @@
                 <meta name='yandex-verification' content='6fe1c40b06cdc1e1' />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="http://matthewtrader.com/wp-content/themes/Minimal-Wedding-Theme/style.css">
 		
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

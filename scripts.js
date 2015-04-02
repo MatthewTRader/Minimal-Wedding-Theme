@@ -1,4 +1,5 @@
-	$(window).load(function(){ 
+$( document ).ready(function() {	
+$(window).load(function(){ 
 	  $('#slider').show().bxSlider({
 	    startSlide:0,
 	    pager: false,
@@ -13,4 +14,5 @@
 	    preloadImages: 'all'
 	    });
 	});
+    });
                             
