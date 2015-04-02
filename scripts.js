@@ -1,5 +1,3 @@
-$(document).ready(function(){
-    
 	$(window).load(function(){ 
 	  $('#slider').show().bxSlider({
 	    startSlide:0,
@@ -15,6 +13,4 @@ $(document).ready(function(){
 	    preloadImages: 'all'
 	    });
 	});
-
-});
                             

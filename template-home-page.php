@@ -5,10 +5,7 @@
     <?php
     $myposts = get_posts('numberposts=15&category_name=Featured');
     foreach($myposts as $post) : ?>
-      <div class="homeSlider">
-          <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<?php the_post_thumbnail('full'); // Declare pixel size you need inside the array ?>
-		      <?php endif; ?>
+      <div class="homeSlider" style="background-image:url('<?php the_field('slide_image'); ?>');background-position:<?php the_field('position'); ?>;">
           <h2>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 		</h2>
