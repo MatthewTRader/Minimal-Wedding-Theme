@@ -5881,6 +5881,10 @@ header {
 
 .logo {
   width: 100%; }
+  @media (max-width: 640px) {
+    .logo {
+      margin: 30px auto 1px;
+      width: 60%; } }
 
 .phoneNo {
   text-align: left;
@@ -5972,8 +5976,13 @@ nav {
 .page-template-template-home-page-php #container #slider div,
 .page-template-template-home-page-php #container #slider ul,
 .page-template-template-home-page-php #container #slider li {
-  height: 100vh !important;
+  height: 100vh;
   text-align: left; }
+  @media (max-width: 640px) {
+    .page-template-template-home-page-php #container #slider div,
+    .page-template-template-home-page-php #container #slider ul,
+    .page-template-template-home-page-php #container #slider li {
+      height: 80vh; } }
 
 .homeSlider .homeSlides {
   height: 100%;
@@ -6000,7 +6009,7 @@ nav {
     .page-template-template-home-page-php .homeSlider h2 {
       font-size: 1.5rem;
       top: auto;
-      bottom: 19%;
+      bottom: -8px;
       width: 100%;
       background: none repeat scroll 0 0 white; } }
 
@@ -6126,10 +6135,6 @@ p #form-allowed-tags {
   .phoneNo span {
     font-size: 1.5rem; } }
 @media (max-width: 640px) {
-  .logo {
-    margin: 35px auto 10px;
-    width: 70%; }
-
   nav {
     margin: 0 auto auto;
     width: 100%; }
