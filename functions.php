@@ -178,6 +178,17 @@ function add_slug_to_body_class($classes)
     return $classes;
 }
 
+
+function mytheme_init() {
+add_filter('comment_form_defaults','mytheme_comments_form_defaults');
+}
+add_action('after_setup_theme','mytheme_init');
+
+function mytheme_comments_form_defaults($default) {
+unset($default['comment_notes_after']);
+return $default;
+}
+
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {

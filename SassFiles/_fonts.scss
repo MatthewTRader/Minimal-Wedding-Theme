@@ -1,0 +1,20 @@
+// _fonts.scss
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script'), local('DancingScript'), url(http://fonts.gstatic.com/s/dancingscript/v5/DK0eTGXiZjN6yA8zAEyM2VhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'), local('Muli-Light'), url(http://fonts.gstatic.com/s/muli/v7/mls_29xz6YyJHsylG8hcCgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2'), url(http://fonts.gstatic.com/s/muli/v7/TgrecWq39GVsTOFonFwGXQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(http://fonts.gstatic.com/s/muli/v7/zscZFkjVRGyfQ_Pw-5exXPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/muli/v7/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}

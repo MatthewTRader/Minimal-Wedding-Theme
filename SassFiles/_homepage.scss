@@ -1,0 +1,114 @@
+// _homepage.scss
+ .page-template-template-home-page-php #container {
+    background: none;
+    padding: 0;
+    width: 83%;
+    @media (max-width: 640px) {
+        height: 80%;
+        margin-top: 0;
+    }
+}
+.bx-controls-direction {
+    @media (max-width: 640px) {
+        display: none;
+    }
+}
+.page-template-template-home-page-php .bx-controls-direction .bx-prev {
+    background: url("img/slider-arrows.png") no-repeat scroll -75px center rgba(0, 0, 0, 0);
+    height: 150px;
+    left: -1px;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    width: 75px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.page-template-template-home-page-php .bx-controls-direction .bx-next {
+    background: url("img/slider-arrows.png") no-repeat scroll 0px center rgba(0, 0, 0, 0);
+    height: 150px;
+    right: -1px;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    width: 75px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.page-template-template-home-page-php .bx-wrapper:hover .bx-controls-direction .bx-prev,
+.page-template-template-home-page-php .bx-wrapper:hover .bx-controls-direction .bx-next {
+    opacity: 0.4;
+}
+.page-template-template-home-page-php #slider ul li {
+    background: url("../img/loading.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    overflow: hidden;
+    position: relative;
+}
+.page-template-template-home-page-php #container #slider div,
+.page-template-template-home-page-php #container #slider ul,
+.page-template-template-home-page-php #container #slider li {
+    height: 100vh !important;
+    text-align: left;
+}
+.homeSlider .homeSlides {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    @media (max-width: 640px) {
+        background-position: top center !important;
+    }
+}
+.page-template-template-home-page-php .homeSlider h2 {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    font-size: 1.9rem;
+    padding: 3px 10px;
+    position: absolute;
+    right: 0;
+    top: -4px;
+    @media (max-width: 640px) {
+        font-size: 1.5rem;
+        top: auto;
+        bottom: 19%;
+        width: 100%;
+        background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+    }
+}
+.page-template-template-home-page-php .homeSlider h2 a {
+    color: #808080;
+}
+.page-template-template-home-page-php .homeSlider h2:hover a {
+    color: #96b1d2;
+}
+#cboxNext,
+#cboxPrevious {
+    height: 40px;
+}
+.hide {
+    opacity: 0;
+}
+.comments {
+    width: 70%;
+}
+#post-3242 li {
+    margin-left: 35px;
+}
+#dvLoading {
+    background: url(/wp-content/uploads/2014/10/Dallas-Wedding-Photographers.gif) no-repeat center center;
+    width: 231px;
+    height: 179px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 20%;
+    margin: -25px 0 0 -25px;
+}
