@@ -7,20 +7,18 @@
 	Tags: weddings, minimal, elegant, matthew t rader
 */
 
-/* -------------- Quick Info --------------
+/*---------------------------------------------------------*\
+                      Variables
+\*---------------------------------------------------------*/
 
-Font:  font-family: 'Dancing Script'; - headers
-       font-family: 'Muli'; - contact info
-       font-family: "aw-conqueror-didot",serif;
-
-Colors:
-    Header color:           #96b1d2
-    font color:             #808080
-    background:             #333333
-    border color            #333333
+//colors
+$bg_header_color: #fff;
+$bg_body_color: #efefef;
 
 
------------------------------------------*/
+/*---------------------------------------------------------*\
+                      Partials
+\*---------------------------------------------------------*/
 
 @import 'normalize.scss';
 @import 'foundation.scss';
@@ -35,60 +33,39 @@ Colors:
 
 
 /*---------------------------------------------------------*\
-                      Global Styles
+                      Extends
 \*---------------------------------------------------------*/
 
-
-//colors
-$color_mountain_mist_approx: #979797;
-$color_bahama_blue_approx: #005999;
-$gallery: #efefef;
-$color_tundora_approx: #444;
-$color_cerulean_approx: #04a4cc;
-$white: #fff;
-$color_gallery_approx: #f0f0f0;
-
-//fonts
-$font_0: aw-conqueror-didot;
-$font_1: serif;
-
 //@extend-elements
-//original selectors
+
 //p, li
-%extend_1 {
-	font-family: $font_0, $font_1;
+%extend_basic_text {
+	font-family: $font_menu;
 	font-size: 1.2rem;
-	color: $color_mountain_mist_approx;
+	color: $font_body_color;
 }
 
-//original selectors
-//*, *:after, *:before
-%extend_2 {
-	//Instead of the line below you could use @includebox-sizing($bs)
-	box-sizing: border-box;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-}
-
-//original selectors
 //.wp-caption .wp-caption-text, .gallery-caption
-%extend_3 {
+%extend_captions {
 	font-size: 11px;
 	line-height: 17px;
 	margin: 0;
 	padding: 0 4px 5px;
 }
 
+/*---------------------------------------------------------*\
+                      Global Styles
+\*---------------------------------------------------------*/
 
 html {
-	font-family: $font_0, $font_1;
+	font-family: $font_menu;
 	font-size: 100%;
 }
 p {
-	@extend %extend_1;
+	@extend %extend_basic_text;
 }
 li {
-	@extend %extend_1;
+	@extend %extend_basic_text;
 }
 h1 {
 	font-family: $font_header;
@@ -104,11 +81,10 @@ h2, h3, h4, h5, h6 {
 	height: 100%;
 }
 a {
-	color: $color_bahama_blue_approx;
-	color: $color_tundora_approx;
+	color: $font_menu_color;
 	text-decoration: none;
 	&:hover {
-		color: $color_tundora_approx;
+		color: $font_header_color;
 		outline: 0;
 	}
 	&:focus {
@@ -152,7 +128,7 @@ main {
 #container {
 	width: 83%;
 	padding: 25px 0;
-	background: none repeat scroll 0 0 $gallery;
+	background: none repeat scroll 0 0 $bg_body_color;
 }
 article {
 	padding: 0 15px;
@@ -165,15 +141,12 @@ img {
 		height: 0;
 	}
 }
-* {
-	@extend %extend_2;
-	&:after {
-		@extend %extend_2;
-	}
-	&:before {
-		@extend %extend_2;
-	}
+*, *:after, *:before {
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
+
 .clear {
 	*zoom: 1;
 	&:before {
@@ -187,21 +160,18 @@ img {
 	}
 }
 ::selection {
-	background: $color_cerulean_approx;
-	color: $white;
-	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	background: $font_header_color;
+	color: $bg_header_color;
 	text-shadow: none;
 }
 ::-webkit-selection {
-	background: $color_cerulean_approx;
-	color: $white;
-	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	background: $font_header_color;
+	color: $bg_header_color;
 	text-shadow: none;
 }
 ::-moz-selection {
-	background: $color_cerulean_approx;
-	color: $white;
-	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	background: $font_header_color;
+	color: $bg_header_color;
 	text-shadow: none;
 }
 .alignnone {
@@ -220,8 +190,8 @@ img {
 	margin: 5px 20px 20px 0;
 }
 .wp-caption {
-	background: $white;
-	border: 1px solid $color_gallery_approx;
+	background: $bg_header_color;
+	border: none;
 	max-width: 96%;
 	padding: 5px 3px 10px;
 	text-align: center;
@@ -243,11 +213,11 @@ img {
 		width: auto;
 	}
 	.wp-caption-text {
-		@extend %extend_3;
+		@extend %extend_captions;
 	}
 }
 .gallery-caption {
-	@extend %extend_3;
+	@extend %extend_captions;
 }
 .page-template-template-home-page-php .container {
 	height: 100%;
@@ -257,7 +227,7 @@ img {
 }
 input:focus {
 	outline: 0;
-	border: 1px solid $color_cerulean_approx;
+	border: 1px solid $font_header_color;
 }
 div.aligncenter {
 	display: block;

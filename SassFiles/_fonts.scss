@@ -1,7 +1,21 @@
 // _fonts.scss
 
-$font_header: 'Dancing Script';
-$font_body: 'Muli';
+
+/*---------------------------------------------------------*\
+                      Variables
+\*---------------------------------------------------------*/
+
+$font_header: Dancing Script;
+$font_body: Muli;
+$font_menu: aw-conqueror-didot serif;
+
+$font_header_color: #96b1d2;
+$font_menu_color: #808080;
+$font_body_color: #979797;
+
+/*---------------------------------------------------------*\
+                      Google Fonts
+\*---------------------------------------------------------*/
 
 @font-face {
   font-family: 'Dancing Script';

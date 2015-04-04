@@ -6,20 +6,12 @@
 	Author URI: http://matthewtrader.com
 	Tags: weddings, minimal, elegant, matthew t rader
 */
-/* -------------- Quick Info --------------
-
-Font:  font-family: 'Dancing Script'; - headers
-       font-family: 'Muli'; - contact info
-       font-family: "aw-conqueror-didot",serif;
-
-Colors:
-    Header color:           #96b1d2
-    font color:             #808080
-    background:             #333333
-    border color            #333333
-
-
------------------------------------------*/
+/*---------------------------------------------------------*\
+                      Variables
+\*---------------------------------------------------------*/
+/*---------------------------------------------------------*\
+                      Partials
+\*---------------------------------------------------------*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -5479,6 +5471,12 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+/*---------------------------------------------------------*\
+                      Variables
+\*---------------------------------------------------------*/
+/*---------------------------------------------------------*\
+                      Google Fonts
+\*---------------------------------------------------------*/
 @font-face {
   font-family: 'Dancing Script';
   font-style: normal;
@@ -5733,7 +5731,7 @@ nav {
 
 .slogan {
   color: #d1d1d3;
-  font-family: "Dancing Script";
+  font-family: Dancing Script;
   font-size: 1.5rem;
   font-weight: 500;
   margin-top: 30px;
@@ -5828,7 +5826,7 @@ nav {
       background: none repeat scroll 0 0 white; } }
 
 .page-template-template-home-page-php .homeSlider h2 a {
-  color: #808080; }
+  color: #979797; }
 
 .page-template-template-home-page-php .homeSlider h2:hover a {
   color: #96b1d2; }
@@ -5856,9 +5854,8 @@ nav {
   top: 20%;
   margin: -25px 0 0 -25px; }
 
-p.form-allowed-tags {
+p .form-allowed-tags {
   display: none; }
-
 p #form-allowed-tags {
   display: none; }
 
@@ -5870,30 +5867,30 @@ p #form-allowed-tags {
 
 /* custom photomosaic css here */
 @media (min-width: 641px) {
+  body.single .pp_content {
+    margin: auto !important;
+    text-align: center !important; }
   body.single .pp_pic_holder.pp_default {
-    background: none repeat scroll 0 0 #fff;
+    background: #efefef;
     border: medium none;
     height: 95% !important;
     left: 2.5% !important;
     width: 95% !important; }
-
-  body.single .pp_content {
-    margin: auto !important;
-    text-align: center !important; }
-
   body.single div.pp_default .pp_content_container .pp_right {
     background: none; }
-
   body.single div.pp_default .pp_content_container .pp_left {
     background: none; }
-
-  body.single div.pp_default .pp_top .pp_left,
-  div.pp_default .pp_top .pp_right,
-  div.pp_default .pp_top .pp_middle {
+  body.single div.pp_default .pp_top .pp_left {
+    background: none; }
+  body.single div.pp_default .pp_bottom .pp_left {
     background: none; }
 
-  body.single div.pp_default .pp_bottom .pp_left,
-  div.pp_default .pp_bottom .pp_right,
+  div.pp_default .pp_top .pp_right {
+    background: none; }
+  div.pp_default .pp_top .pp_middle {
+    background: none; }
+  div.pp_default .pp_bottom .pp_right {
+    background: none; }
   div.pp_default .pp_bottom .pp_middle {
     background: none; } }
 @media (max-width: 640px) {
@@ -5904,11 +5901,10 @@ p #form-allowed-tags {
   color: #efefef;
   padding: 10px;
   width: 100%; }
-
-.packages-ad a {
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: 700; }
+  .packages-ad a {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700; }
 
 @media (max-width: 1000px) {
   .slogan {
@@ -5982,17 +5978,12 @@ p #form-allowed-tags {
     width: 50% !important;
     margin: 0 !important; } }
 /*---------------------------------------------------------*\
-                      Global Styles
+                      Extends
 \*---------------------------------------------------------*/
 p, li {
-  font-family: aw-conqueror-didot, serif;
+  font-family: aw-conqueror-didot serif;
   font-size: 1.2rem;
   color: #979797; }
-
-*, *:after, *:before {
-  box-sizing: border-box;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
 
 .wp-caption .wp-caption-text, .gallery-caption {
   font-size: 11px;
@@ -6000,16 +5991,19 @@ p, li {
   margin: 0;
   padding: 0 4px 5px; }
 
+/*---------------------------------------------------------*\
+                      Global Styles
+\*---------------------------------------------------------*/
 html {
-  font-family: aw-conqueror-didot, serif;
+  font-family: aw-conqueror-didot serif;
   font-size: 100%; }
 
 h1 {
-  font-family: "Dancing Script";
+  font-family: Dancing Script;
   margin-left: 5px; }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Dancing Script"; }
+  font-family: Dancing Script; }
 
 .center {
   text-align: center;
@@ -6017,11 +6011,10 @@ h2, h3, h4, h5, h6 {
   height: 100%; }
 
 a {
-  color: #005999;
-  color: #444;
+  color: #808080;
   text-decoration: none; }
   a:hover {
-    color: #444;
+    color: #96b1d2;
     outline: 0; }
   a:focus {
     outline: 0; }
@@ -6066,6 +6059,11 @@ img {
     visibility: hidden;
     height: 0; }
 
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
 .clear {
   *zoom: 1; }
   .clear:before {
@@ -6077,17 +6075,17 @@ img {
     clear: both; }
 
 ::selection {
-  background: #04a4cc;
+  background: #96b1d2;
   color: #fff;
   text-shadow: none; }
 
 ::-webkit-selection {
-  background: #04a4cc;
+  background: #96b1d2;
   color: #fff;
   text-shadow: none; }
 
 ::-moz-selection {
-  background: #04a4cc;
+  background: #96b1d2;
   color: #fff;
   text-shadow: none; }
 
@@ -6108,7 +6106,7 @@ img {
 
 .wp-caption {
   background: #fff;
-  border: 1px solid #f0f0f0;
+  border: none;
   max-width: 96%;
   padding: 5px 3px 10px;
   text-align: center; }
@@ -6134,7 +6132,7 @@ img {
 
 input:focus {
   outline: 0;
-  border: 1px solid #04a4cc; }
+  border: 1px solid #96b1d2; }
 
 div.aligncenter {
   display: block;
