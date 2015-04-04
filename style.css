@@ -20,192 +20,6 @@ Colors:
 
 
 -----------------------------------------*/
-/*---------------------------------------------------------*\
-                      Global Styles
-\*---------------------------------------------------------*/
-html {
-  font-family: "aw-conqueror-didot", serif;
-  font-size: 100%; }
-
-p,
-li {
-  font-family: "aw-conqueror-didot", serif;
-  font-size: 1.2rem;
-  color: #979797; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Dancing Script'; }
-
-h1 {
-  margin-left: 5px; }
-
-.center {
-  text-align: center;
-  margin: auto;
-  height: 100%; }
-
-a {
-  text-decoration: none;
-  color: #005999; }
-
-.zeroPadding {
-  padding: 0; }
-
-.column,
-.columns {
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
-
-.page-template-template-home-page-php .container {
-  height: 100%;
-  padding-left: 0em;
-  padding-right: 0em;
-  overflow: hidden; }
-
-#container {
-  width: 83%;
-  padding: 25px 0;
-  background: none repeat scroll 0 0 #efefef; }
-
-article {
-  padding: 0 15px; }
-
-img#wpstats {
-  visibility: hidden;
-  height: 0px; }
-
-*,
-*:after,
-*:before {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
-
-/* clear */
-.clear:before,
-.clear:after {
-  content: ' ';
-  display: table; }
-
-.clear:after {
-  clear: both; }
-
-.clear {
-  *zoom: 1; }
-
-img {
-  max-width: 100%;
-  vertical-align: bottom; }
-
-a {
-  color: #444;
-  text-decoration: none; }
-
-a:hover {
-  color: #444; }
-
-a:focus {
-  outline: 0; }
-
-a:hover,
-a:active {
-  outline: 0; }
-
-input:focus {
-  outline: 0;
-  border: 1px solid #04A4CC; }
-
-/*------------------------------------*\
-    MISC
-\*------------------------------------*/
-::selection {
-  background: #04A4CC;
-  color: #FFF;
-  text-shadow: none; }
-
-::-webkit-selection {
-  background: #04A4CC;
-  color: #FFF;
-  text-shadow: none; }
-
-::-moz-selection {
-  background: #04A4CC;
-  color: #FFF;
-  text-shadow: none; }
-
-/*------------------------------------*\
-    WORDPRESS CORE
-\*------------------------------------*/
-.alignnone {
-  margin: 5px 20px 20px 0; }
-
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto; }
-
-.alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
-
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
-
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
-
-a img.alignnone {
-  margin: 5px 20px 20px 0; }
-
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
-
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.wp-caption {
-  background: #FFF;
-  border: 1px solid #F0F0F0;
-  max-width: 96%;
-  padding: 5px 3px 10px;
-  text-align: center; }
-
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0; }
-
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0; }
-
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px; }
-
-.wp-caption img {
-  border: 0 none;
-  height: auto;
-  margin: 0;
-  max-width: 98.5%;
-  padding: 0;
-  width: auto; }
-
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  font-size: 11px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px; }
-
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -5919,7 +5733,7 @@ nav {
 
 .slogan {
   color: #d1d1d3;
-  font-family: 'Dancing Script';
+  font-family: "Dancing Script";
   font-size: 1.5rem;
   font-weight: 500;
   margin-top: 30px;
@@ -6166,32 +5980,164 @@ p #form-allowed-tags {
     display: inline-block !important;
     float: left;
     width: 50% !important;
-    margin: 0 !important; }
+    margin: 0 !important; } }
+/*---------------------------------------------------------*\
+                      Global Styles
+\*---------------------------------------------------------*/
+p, li {
+  font-family: aw-conqueror-didot, serif;
+  font-size: 1.2rem;
+  color: #979797; }
 
-  /*   .page-template-template-home-page-php .bx-wrapper img {
-         margin-top: 0px;
-         max-height: none;
-         min-height: 1px;
-         width: 100%;
-         position: relative;
-         z-index: 100;
-     }
-     .page-template-template-home-page-php .homeSlider h2 a {
-         color: #96b1d2;
-     }
-     .page-template-template-home-page-php .homeSlider h2 {
-         background: none repeat scroll 0px 0px rgba(204, 204, 204, 0.3);
-         font-size: 1.9rem;
-         position: absolute;
-         right: 0px;
-         top: 240px;
-         width: 100%;
-         height: 100px;
-         padding: 10px;
-         z-index: 1;
-     }
-     .bx-viewport {
-         height: 100%;
-     }  */ }
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+.wp-caption .wp-caption-text, .gallery-caption {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+html {
+  font-family: aw-conqueror-didot, serif;
+  font-size: 100%; }
+
+h1 {
+  font-family: "Dancing Script";
+  margin-left: 5px; }
+
+h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script"; }
+
+.center {
+  text-align: center;
+  margin: auto;
+  height: 100%; }
+
+a {
+  color: #005999;
+  color: #444;
+  text-decoration: none; }
+  a:hover {
+    color: #444;
+    outline: 0; }
+  a:focus {
+    outline: 0; }
+  a:active {
+    outline: 0; }
+  a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px; }
+  a img.alignnone {
+    margin: 5px 20px 20px 0; }
+  a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0; }
+  a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.zeroPadding {
+  padding: 0; }
+
+.column {
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
+
+.columns {
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
+
+#container {
+  width: 83%;
+  padding: 25px 0;
+  background: none repeat scroll 0 0 #efefef; }
+
+article {
+  padding: 0 15px; }
+
+img {
+  max-width: 100%;
+  vertical-align: bottom; }
+  img#wpstats {
+    visibility: hidden;
+    height: 0; }
+
+.clear {
+  *zoom: 1; }
+  .clear:before {
+    content: ' ';
+    display: table; }
+  .clear:after {
+    content: ' ';
+    display: table;
+    clear: both; }
+
+::selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none; }
+
+::-webkit-selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none; }
+
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center; }
+  .wp-caption.alignnone {
+    margin: 5px 20px 20px 0; }
+  .wp-caption.alignleft {
+    margin: 5px 20px 20px 0; }
+  .wp-caption.alignright {
+    margin: 5px 0 20px 20px; }
+  .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto; }
+
+.page-template-template-home-page-php .container {
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden; }
+
+input:focus {
+  outline: 0;
+  border: 1px solid #04a4cc; }
+
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
 
 /*# sourceMappingURL=style.css.map */

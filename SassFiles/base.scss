@@ -1,0 +1,265 @@
+/*
+	Theme Name: Minimal Wedding
+	Description: Minimal Wedding Theme
+	Version: 1.0.0
+	Author: Matthew T Rader (@matthew_t_rader)
+	Author URI: http://matthewtrader.com
+	Tags: weddings, minimal, elegant, matthew t rader
+*/
+
+/* -------------- Quick Info --------------
+
+Font:  font-family: 'Dancing Script'; - headers
+       font-family: 'Muli'; - contact info
+       font-family: "aw-conqueror-didot",serif;
+
+Colors:
+    Header color:           #96b1d2
+    font color:             #808080
+    background:             #333333
+    border color            #333333
+
+
+-----------------------------------------*/
+
+@import 'normalize.scss';
+@import 'foundation.scss';
+@import 'fonts.scss';
+@import 'bxslider.scss';
+@import 'header.scss';
+@import 'homepage.scss';
+@import 'pages.scss';
+@import 'footer.scss';
+@import 'photomosaic.scss';
+@import 'mobile.scss';
+
+
+/*---------------------------------------------------------*\
+                      Global Styles
+\*---------------------------------------------------------*/
+
+
+//colors
+$color_mountain_mist_approx: #979797;
+$color_bahama_blue_approx: #005999;
+$gallery: #efefef;
+$color_tundora_approx: #444;
+$color_cerulean_approx: #04a4cc;
+$white: #fff;
+$color_gallery_approx: #f0f0f0;
+
+//fonts
+$font_0: aw-conqueror-didot;
+$font_1: serif;
+
+//@extend-elements
+//original selectors
+//p, li
+%extend_1 {
+	font-family: $font_0, $font_1;
+	font-size: 1.2rem;
+	color: $color_mountain_mist_approx;
+}
+
+//original selectors
+//*, *:after, *:before
+%extend_2 {
+	//Instead of the line below you could use @includebox-sizing($bs)
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+//original selectors
+//.wp-caption .wp-caption-text, .gallery-caption
+%extend_3 {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+
+html {
+	font-family: $font_0, $font_1;
+	font-size: 100%;
+}
+p {
+	@extend %extend_1;
+}
+li {
+	@extend %extend_1;
+}
+h1 {
+	font-family: $font_header;
+	margin-left: 5px;
+}
+h2, h3, h4, h5, h6 {
+	font-family: $font_header;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+	height: 100%;
+}
+a {
+	color: $color_bahama_blue_approx;
+	color: $color_tundora_approx;
+	text-decoration: none;
+	&:hover {
+		color: $color_tundora_approx;
+		outline: 0;
+	}
+	&:focus {
+		outline: 0;
+	}
+	&:active {
+		outline: 0;
+	}
+	img {
+		&.alignright {
+			float: right;
+			margin: 5px 0 20px 20px;
+		}
+		&.alignnone {
+			margin: 5px 20px 20px 0;
+		}
+		&.alignleft {
+			float: left;
+			margin: 5px 20px 20px 0;
+		}
+		&.aligncenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+.zeroPadding {
+	padding: 0;
+}
+main {
+}
+.column {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.columns {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+#container {
+	width: 83%;
+	padding: 25px 0;
+	background: none repeat scroll 0 0 $gallery;
+}
+article {
+	padding: 0 15px;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+	&#wpstats {
+		visibility: hidden;
+		height: 0;
+	}
+}
+* {
+	@extend %extend_2;
+	&:after {
+		@extend %extend_2;
+	}
+	&:before {
+		@extend %extend_2;
+	}
+}
+.clear {
+	*zoom: 1;
+	&:before {
+		content: ' ';
+		display: table;
+	}
+	&:after {
+		content: ' ';
+		display: table;
+		clear: both;
+	}
+}
+::selection {
+	background: $color_cerulean_approx;
+	color: $white;
+	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+}
+::-webkit-selection {
+	background: $color_cerulean_approx;
+	color: $white;
+	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $color_cerulean_approx;
+	color: $white;
+	//Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+}
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+.wp-caption {
+	background: $white;
+	border: 1px solid $color_gallery_approx;
+	max-width: 96%;
+	padding: 5px 3px 10px;
+	text-align: center;
+	&.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+	&.alignleft {
+		margin: 5px 20px 20px 0;
+	}
+	&.alignright {
+		margin: 5px 0 20px 20px;
+	}
+	img {
+		border: 0 none;
+		height: auto;
+		margin: 0;
+		max-width: 98.5%;
+		padding: 0;
+		width: auto;
+	}
+	.wp-caption-text {
+		@extend %extend_3;
+	}
+}
+.gallery-caption {
+	@extend %extend_3;
+}
+.page-template-template-home-page-php .container {
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	overflow: hidden;
+}
+input:focus {
+	outline: 0;
+	border: 1px solid $color_cerulean_approx;
+}
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
