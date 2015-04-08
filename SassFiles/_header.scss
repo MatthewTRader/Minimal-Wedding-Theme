@@ -52,13 +52,17 @@
         color: #808080;
     }
     @media (max-width: 1400px) {
-        .phoneNo {
-            font-size: .9rem;
+            font-size: .86rem;
             span {
                 font-size: 2rem;
-            }
         }
     }
+    @media (max-width: 1200px) {
+        font-size: .71rem;
+    span {
+        font-size: 1.65rem;
+    }
+}
 }
 nav {
     margin: 50px 0;

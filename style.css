@@ -5710,10 +5710,15 @@ header {
   .phoneNo a {
     color: #808080; }
   @media (max-width: 1400px) {
-    .phoneNo .phoneNo {
-      font-size: .9rem; }
-      .phoneNo .phoneNo span {
+    .phoneNo {
+      font-size: .86rem; }
+      .phoneNo span {
         font-size: 2rem; } }
+  @media (max-width: 1200px) {
+    .phoneNo {
+      font-size: .71rem; }
+      .phoneNo span {
+        font-size: 1.65rem; } }
 
 nav {
   margin: 50px 0; }
@@ -5938,12 +5943,6 @@ p #form-allowed-tags {
 
   .page-template-template-home-page-php #container {
     width: 100%; } }
-@media (max-width: 1200px) {
-  .phoneNo {
-    font-size: .6rem; }
-
-  .phoneNo span {
-    font-size: 1.5rem; } }
 @media (max-width: 640px) {
   nav {
     margin: 0 auto auto;
