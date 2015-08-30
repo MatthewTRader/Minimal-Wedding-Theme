@@ -34,7 +34,7 @@
         width: 100%;
     }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     nav {
         margin: 0 auto auto;
         width: 100%;
@@ -57,11 +57,12 @@
         margin-top: -2px;
     }
     #container {
-       margin-top: 100px;
+        width:100%;
+        margin-top: 0px;
         height: auto;
         overflow: hidden;
     }
-    ul.related_post li {
+    .wp_rp_content ul.related_post li {
         clear: none !important;
         display: inline-block !important;
         float: left;

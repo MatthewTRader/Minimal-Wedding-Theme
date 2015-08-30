@@ -11,8 +11,8 @@
         z-index: 99;
         background: #fff;
     }
-    @media (max-width: 640px) {
-        height: 20%;
+    @media (max-width: 768px) {
+        height: 120px;
         position: relative;
         text-align: center;
     }
@@ -23,8 +23,8 @@
 .header {
     padding: 25px 10px 10px 10px;
     height: 100%;
-    @media (max-width: 640px) {
-        height: 20%
+    @media (max-width: 768px) {
+        height: 120px;
     }
     @media (max-width: 1000px) {
         height: 100%;
@@ -33,7 +33,7 @@
 }
 .logo {
     width: 100%;
-   @media (max-width: 640px) {
+   @media (max-width: 768px) {
   margin: 30px auto 1px;
   width: 60%;
 }
