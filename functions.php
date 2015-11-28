@@ -17,7 +17,7 @@
 
 if (!isset($content_width))
 {
-    $content_width = 900;
+    $content_width = 1600;
 }
 
 if (function_exists('add_theme_support'))
@@ -469,9 +469,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-if ( ! isset( $content_width ) )
-    $content_width = 1000;
-
 //add hatom data
 function add_suf_hatom_data($content) {
     $t = get_the_modified_time('F jS, Y');
@@ -502,5 +499,6 @@ function add_alt_tags($content)
         return $content;
 }
 add_filter('the_content', 'add_alt_tags', 99999);
+
 
 ?>

@@ -8,3 +8,9 @@ p {
 		display: none;
 	}
 }
+
+.post {
+    .tiled-gallery-caption {
+        display:none !important;
+    }
+}
