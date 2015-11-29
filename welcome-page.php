@@ -10,7 +10,7 @@
     
     <div class="row">
 
-        <a href="http://matthewtrader.com/dallas-wedding-photographer" class="medium-6 small-12 columns imageButton">    
+        <a href="http://matthewtrader.com/weddings" class="medium-6 small-12 columns imageButton">    
                 <img src="http://matthewtrader.com/wp-content/uploads/2015/11/Weddings-Logo-720px.png" alt="Dallas Wedding Photographer"/>
                 <br>
                 <div class="slogan">Cherish Love's Story</div>
