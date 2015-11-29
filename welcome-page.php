@@ -1,19 +1,40 @@
-                                <?php  /* Template Name: Welcome Page */  get_header(); ?> 
-<div id="dvLoading"></div> 
+                                <?php  /* Template Name: Welcome Page */  get_header("welcome");  ?> 
+
+<header>
+    
+<h1>Matthew T Rader Photography</h1>    
+
+</header>
+
 <main role="main">
-<div id="slider" class="bxsliderWrapper" style="display:none;">
-    <?php
-    $myposts = get_posts('numberposts=15&category_name=Featured');
-    foreach($myposts as $post) : ?>
-    <div class="homeSlider">
-      <div class="homeSlides" style="background-image:url('<?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); echo $thumb_url[0]; ?>');background-position:<?php the_field('position'); ?>;">
-          <h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-		</h2>
-          </div>
-  </div> 
-<?php endforeach; ?>
+    
+    <div class="row">
+
+        <a href="http://matthewtrader.com/dallas-wedding-photographer" class="medium-6 small-12 columns imageButton">    
+                <img src="http://matthewtrader.com/wp-content/uploads/2015/11/Weddings-Logo-720px.png" alt="Dallas Wedding Photographer"/>
+                <br>
+                <div class="slogan">Cherish Love's Story</div>
+        </a>
+        <a href="http://art.matthewtrader.com" class="medium-6 small-12 columns imageButton">
+                <h2>Art Photography</h2>
+        </a>
     </div>
-    </main>
+    
+    <div class="row">
+        <div class="small-12">
+            <div class="socialMedia">
+                <ul>
+                    <li><a href="https://www.facebook.com/MatthewTRader.Photography" target="_blank"><i class="fa fa-facebook"></i>Facebook Page</a></li>
+                    <li><a href="http://instagram.com/matthew_t_rader" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
+                    <li><a href="https://www.twitter.com/Matthew_T_Rader" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="http://www.flickr.com/people/infinite-magic/"><i class="fa fa-flickr" target="_blank" target="_blank"></i>Flickr</a></li>
+                    <li><a href="http://matthewtrader.com/blog"><i class="fa fa-file-text-o" target="_blank"></i>Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
 <?php get_footer(); ?>
                             

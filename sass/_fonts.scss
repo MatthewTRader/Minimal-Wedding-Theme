@@ -35,3 +35,10 @@ $font_body_color: #979797;
   font-weight: 400;
   src: local('Muli'), url(http://fonts.gstatic.com/s/muli/v7/zscZFkjVRGyfQ_Pw-5exXPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/muli/v7/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(https://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5pS3E-kSBmtLoNJPDtbj2Pk.ttf) format('truetype');
+}

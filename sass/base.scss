@@ -17,6 +17,20 @@ $bg_body_color: #efefef;
 
 
 /*---------------------------------------------------------*\
+                       Mixins
+\*---------------------------------------------------------*/
+
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+/*---------------------------------------------------------*\
                       Partials
 \*---------------------------------------------------------*/
 
@@ -27,6 +41,7 @@ $bg_body_color: #efefef;
 @import 'core.scss';
 @import 'header.scss';
 @import 'homepage.scss';
+@import 'welcomepage.scss';
 @import 'pages.scss';
 @import 'footer.scss';
 @import 'photomosaic.scss';
@@ -34,7 +49,7 @@ $bg_body_color: #efefef;
 
 
 /*---------------------------------------------------------*\
-                      Extends
+                      Extends & Mixins
 \*---------------------------------------------------------*/
 
 //@extend-elements
@@ -53,4 +68,3 @@ $bg_body_color: #efefef;
 	margin: 0;
 	padding: 0 4px 5px;
 }
-

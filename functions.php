@@ -127,7 +127,7 @@ function html5blank_conditional_scripts()
 function html5blank_styles()
 {
 
-    wp_register_style('stylesheet', get_template_directory_uri() . 'http://matthewtrader.com/wp-content/themes/Minimal-Wedding-Theme/style.css', array(), 'all');
+    wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), 'all');
     wp_enqueue_style('stylesheet'); // Enqueue it!
 }
 
