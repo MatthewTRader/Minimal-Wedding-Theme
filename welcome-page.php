@@ -27,8 +27,8 @@
                     <li><a href="https://www.facebook.com/MatthewTRader.Photography" target="_blank"><i class="fa fa-facebook"></i>Facebook Page</a></li>
                     <li><a href="http://instagram.com/matthew_t_rader" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                     <li><a href="https://www.twitter.com/Matthew_T_Rader" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
-                    <li><a href="http://www.flickr.com/people/infinite-magic/"><i class="fa fa-flickr" target="_blank" target="_blank"></i>Flickr</a></li>
-                    <li><a href="http://matthewtrader.com/blog"><i class="fa fa-file-text-o" target="_blank"></i>Blog</a></li>
+                    <li><a href="http://www.flickr.com/people/infinite-magic/ target="_blank""><i class="fa fa-flickr"></i>Flickr</a></li>
+                    <li><a href="http://matthewtrader.com/blog" target="_blank"><i class="fa fa-file-text-o"></i>Blog</a></li>
                 </ul>
             </div>
         </div>
