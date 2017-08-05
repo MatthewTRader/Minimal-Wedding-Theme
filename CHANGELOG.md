@@ -1,4 +1,4 @@
-### [HTML5 Blank](http://html5blank.com) Changelog
+### [Minimal Wedding](http://matthewtrader.com) Changelog
 
 ## 1.4.3 (02 December, 2013)
 
@@ -35,18 +35,18 @@
 
 ## 1.3.9 (07 April, 2013)
 
-* Added WAI-ARIA landmark roles to enrich semantics and improve accessibility. [Stacey Cordoni](https://github.com/staceycordoni) [#32](https://github.com/toddmotto/html5blank/pull/32)
+* Added WAI-ARIA landmark roles to enrich semantics and improve accessibility. [Stacey Cordoni](https://github.com/staceycordoni) [#32](https://github.com/toddmotto/minimalwedding/pull/32)
 * Added WAI-ARIA 'role=button' to search form &lt;button&gt;
-* Upgrade search input type from 'type=text' to 'type=search' for better use of HTML5 alongside WAI-ARIA
+* Upgrade search input type from 'type=text' to 'type=search' for better use of minimalwedding alongside WAI-ARIA
 
 ## 1.3.8 (02 April, 2013)
 
 * Load Modernizr from CloudFlare CDN (same as Conditionizr)
 * Load only Conditionizr and Modernizr through the &lt;head&gt;, with Conditionizr call too.
 * Load jQuery CDN (Google) in footer, with jQuery CDN fallback (CloudFlare)
-* Separated WordPress script enqueue to load Conditionizr, Modernizr in head: 'function html5blank_header_scripts()'
+* Separated WordPress script enqueue to load Conditionizr, Modernizr in head: 'function minimalwedding_header_scripts()'
 * Hard-coded jQuery and CDN fallback into footer.php above custom theme scripts, more reliable fallback method
-* Load custom theme scripts in footer: 'function html5blank_footer_scripts()'
+* Load custom theme scripts in footer: 'function minimalwedding_footer_scripts()'
 * Loading scripts before closing &lt;/body&gt; tag is best practice and not seen often in WordPress sites
 * Lowercase &lt;!doctype html&gt; in header.php
 * Remove empty line at end of functions.php
@@ -80,7 +80,7 @@
 * Change pagination ID to class for better CSS
 * Improve indentation in 404.php for child element
 * Update screenshot.png
-* Update default HTML5 Blank logo and gravatar
+* Update default Minimal Wedding logo and gravatar
 
 ## 1.3.4 (22 March, 2013)
 
@@ -88,7 +88,7 @@
 * Replaced &lt;aside&gt; id with a class for better CSS
 * Better naming conventions for search form, more class focused
 * Removed JavaScript onfocus/onblur events in search input
-* Replaced onfocus/onblur events with HTML5 placeholder for 'Search' (this is fine for non-supporting browsers as the search button indicates it's a search input)
+* Replaced onfocus/onblur events with minimalwedding placeholder for 'Search' (this is fine for non-supporting browsers as the search button indicates it's a search input)
 * Search &lt;input&gt; has been replaced to a &lt;button&gt; for more flexibility, allows HTML content
 * Removed font-smoothing from Opera and Mozilla as no longer supported
 
@@ -111,15 +111,15 @@
 * CSS indentation formatting, new lines for shared selectors
 * Update jQuery to version 1.9.1, Google CDN and CloudFlare CDN
 * Update Conditionizr to CDNJS CloudFlare v2.1.1
-* Removed mediaqueries.min.js, do we really need older browsers to be responsive, HTML5Shiv (built-in Modernizr) is enough
+* Removed mediaqueries.min.js, do we really need older browsers to be responsive, minimalweddingShiv (built-in Modernizr) is enough
 * Updated scripts.js to ride off Modernizr.svg feature detect and remove custom script detect
 
 ## 1.3.0 (09 February, 2013)
 
 * Remove jquery.min.js 'local' fallback from /js/ folder, simply fallback to another CDN (CloudFlare), see footer.php, saves code and maintenance across all sites
 * Remove Google Analytics and jQuery fallback from functions.php injection, added manually in footer.php
-* Setup Conditionizr to supply an HTML5Shim to Less Than IE9 browsers
-* Updates Conditionizr to v1.2.0, enhanced retina detection and unlimited 'customScript', for polyfill usage (e.g. using respond.js and html5shim together)
+* Setup Conditionizr to supply an minimalweddingShim to Less Than IE9 browsers
+* Updates Conditionizr to v1.2.0, enhanced retina detection and unlimited 'customScript', for polyfill usage (e.g. using respond.js and minimalweddingshim together)
 * Added Romanian language translation file to /languages/
 
 ## 1.2.9 (03 February, 2013)
@@ -159,7 +159,7 @@
 
 ## 1.2.4 (15 October, 2012)
 
-* Custom Comments callback - wp_list_comments('type=comment&callback=html5blankcomments'); editable comments now in functions.php
+* Custom Comments callback - wp_list_comments('type=comment&callback=minimalweddingcomments'); editable comments now in functions.php
 * Custom default Gravatar now built in, with demo gravatar.jpg inside the 'img' folder, swap it out
 * Changed date format from the_date to the_time('F j, Y')
 * Changed time format from the_time to the_time('g:i a')
@@ -177,7 +177,7 @@
 
 ## 1.2.1 (07 October, 2012)
 
-* Custom callback for wp_nav_menu, now in functions.php with html5blank_nav(); in header.php
+* Custom callback for wp_nav_menu, now in functions.php with minimalwedding_nav(); in header.php
 * JavaScript added to 'scripts.js', hides URL bar after page load on iPhone/iPad, great for responsive projects
 * Meta tag 'apple-mobile-web-app-capable' added to header.php
 * Meta tag 'apple-mobile-web-app-status-bar-style' added to header.php
@@ -236,13 +236,13 @@
 * Added Custom Background support into functions.php
 * Remove WordPress Admin bar by default
 * Remove 'text/css' from enqueued stylesheet
-* Updated screenshot.png logo to new HTML5 Blank branding
+* Updated screenshot.png logo to new Minimal Wedding branding
 * CSS change, :focus changed to input:focus as FireFox was adding focus styles to any element
 * CSS change, new Chrome updates renders fonts thicker, reduced font-weight on body from 400 to 300
 * CSS change, create non-semantic section below media queries, moved text-selection colors etc
 * CSS change, default font-family for h1-h6 Helvetica Neue with Helvetica/Arial fallbacks (previous Georgia)
 * CSS header theme details updated to new URL
-* Move toddmotto.com/html5blank/ to new html5blank.com domain
+* Move toddmotto.com/minimalwedding/ to new minimalwedding.com domain
 * Favicon support for theme directory favicon.ico
 * Apple touch icon support, drag into root folder
 * LICENSE.md and README.md added and fully updated

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: HTML5 Blank WordPress Theme\n"
+"Project-Id-Version: Minimal Wedding WordPress Theme\n"
 "POT-Creation-Date: 2012-10-18 00:53+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Fabián Núñez <fanuneza@gmail.com>\n"
@@ -117,45 +117,45 @@ msgid "View Article"
 msgstr "Ver artículo"
 
 #: ../functions.php:438 ../functions.php:439
-msgid "HTML5 Blank Custom Post"
-msgstr "Entradas personalizadas de HTML5 Blank"
+msgid "Minimal Wedding Custom Post"
+msgstr "Entradas personalizadas de Minimal Wedding"
 
 #: ../functions.php:440
 msgid "Add New"
 msgstr "Añadir nuevo"
 
 #: ../functions.php:441
-msgid "Add New HTML5 Blank Custom Post"
-msgstr "Añadir entrada personalizada de HTML5 Blank"
+msgid "Add New Minimal Wedding Custom Post"
+msgstr "Añadir entrada personalizada de Minimal Wedding"
 
 #: ../functions.php:442
 msgid "Edit"
 msgstr "Editar"
 
 #: ../functions.php:443
-msgid "Edit HTML5 Blank Custom Post"
-msgstr "Editar entrada personalizada de HTML5 Blank"
+msgid "Edit Minimal Wedding Custom Post"
+msgstr "Editar entrada personalizada de Minimal Wedding"
 
 #: ../functions.php:444
-msgid "New HTML5 Blank Custom Post"
-msgstr "Nueva entrada personalizada de HTML5 Blank"
+msgid "New Minimal Wedding Custom Post"
+msgstr "Nueva entrada personalizada de Minimal Wedding"
 
 #: ../functions.php:445 ../functions.php:446
-msgid "View HTML5 Blank Custom Post"
-msgstr "Ver entrada personalizada de HTML5 Blank"
+msgid "View Minimal Wedding Custom Post"
+msgstr "Ver entrada personalizada de Minimal Wedding"
 
 #: ../functions.php:447
-msgid "Search HTML5 Blank Custom Post"
-msgstr "Buscar entrada personalizada de HTML5 Blank"
+msgid "Search Minimal Wedding Custom Post"
+msgstr "Buscar entrada personalizada de Minimal Wedding"
 
 #: ../functions.php:448
-msgid "No HTML5 Blank Custom Posts found"
-msgstr "No se han encontrado entradas personalizadas de HTML5 Blank"
+msgid "No Minimal Wedding Custom Posts found"
+msgstr "No se han encontrado entradas personalizadas de Minimal Wedding"
 
 #: ../functions.php:449
-msgid "No HTML5 Blank Custom Posts found in Trash"
+msgid "No Minimal Wedding Custom Posts found in Trash"
 msgstr ""
-"No se han encontrado entradas personalizadas de HTML5 Blank en la papelera"
+"No se han encontrado entradas personalizadas de Minimal Wedding en la papelera"
 
 #: ../index.php:6
 msgid "Latest Posts"

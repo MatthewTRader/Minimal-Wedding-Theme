@@ -1,10 +1,10 @@
-# [HTML5 Blank](http://html5blank.com) License
+# [Minimal Wedding](http://minimalwedding.com) License
 
 ## MIT License
 
-Copyright &copy; 2013 HTML5 Blank // @html5blank
+Copyright &copy; 2017 Minimal Wedding // @matthew_t_rader
 
-Built by Todd Motto // @toddmotto
+Built by Matthew T Rader // @matthew_t_rader
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

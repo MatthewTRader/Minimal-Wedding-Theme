@@ -4,7 +4,11 @@
 
 html {
 	font-family: $font_menu;
-	font-size: 100%;
+	font-size: 80%;
+    
+    @media (min-width: 769px) {
+        font-size: 100%;
+    }
 }
 p {
 	@extend %extend_basic_text;
@@ -15,9 +19,17 @@ li {
 h1 {
 	font-family: $font_header;
 	margin-left: 5px;
+    font-size: 3rem;
 }
 h2, h3, h4, h5, h6 {
-	font-family: $font_header;
+	font-family: $font_body;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 20px;
+    color: $font_body_color;
 }
 
 .center {
@@ -164,12 +176,7 @@ img {
 .gallery-caption {
 	@extend %extend_captions;
 }
-.page-template-template-home-page-php .container {
-	height: 100%;
-	padding-left: 0;
-	padding-right: 0;
-	overflow: hidden;
-}
+
 input:focus {
 	outline: 0;
 	border: 1px solid $font_header_color;

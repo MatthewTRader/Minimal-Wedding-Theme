@@ -27,7 +27,7 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
+    add_image_size('large', 700, 500, true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -55,15 +55,15 @@ if (function_exists('add_theme_support'))
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
-    load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+    load_theme_textdomain('minimalwedding', get_template_directory() . '/languages');
 }
 
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
 
-// HTML5 Blank navigation
-function html5blank_nav()
+// Minimal Wedding navigation
+function minimalwedding_nav()
 {
 	wp_nav_menu(
 	array(
@@ -87,8 +87,8 @@ function html5blank_nav()
 	);
 }
 
-// Load HTML5 Blank scripts (header.php)
-function html5blank_header_scripts()
+// Load Minimal Wedding scripts (header.php)
+function minimalwedding_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
@@ -107,15 +107,15 @@ function html5blank_header_scripts()
         wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('bxslider'); // Enqueue it!
         
-         wp_register_script('html5blankscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
+         wp_register_script('minimalweddingscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('minimalweddingscripts'); // Enqueue it!
   
     
     }
 }
 
-// Load HTML5 Blank conditional scripts
-function html5blank_conditional_scripts()
+// Load Minimal Wedding conditional scripts
+function minimalwedding_conditional_scripts()
 {
     if (is_page('pagenamehere')) {
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
@@ -123,21 +123,21 @@ function html5blank_conditional_scripts()
     }
 }
 
-// Load HTML5 Blank styles
-function html5blank_styles()
+// Load Minimal Wedding styles
+function minimalwedding_styles()
 {
 
     wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), 'all');
     wp_enqueue_style('stylesheet'); // Enqueue it!
 }
 
-// Register HTML5 Blank Navigation
-function register_html5_menu()
+// Register Minimal Wedding Navigation
+function register_minimalwedding_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'header-menu' => __('Header Menu', 'minimalwedding'), // Main Navigation
+        'sidebar-menu' => __('Sidebar Menu', 'minimalwedding'), // Sidebar Navigation
+        'extra-menu' => __('Extra Menu', 'minimalwedding') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -194,8 +194,8 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Widget Area 1', 'minimalwedding'),
+        'description' => __('Description for this widget-area...', 'minimalwedding'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -205,14 +205,43 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Widget Area 2', 'minimalwedding'),
+        'description' => __('Description for this widget-area...', 'minimalwedding'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+    // Define Posts Bottom Content Widget
+    register_sidebar(array(
+        'name' => __('Posts Bottom Content Widget', 'minimalwedding'),
+        'description' => __('For Content Appearing Below Posts Content', 'minimalwedding'),
+        'id' => 'post-bottom-content-widget',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
+add_action('pre_get_posts', 'custom_per_page');
+
+function custom_per_page(&$query) {
+    
+    if (is_post_type_archive('Weddings')) {
+        $query->set('posts_per_page', 20);
+    }
+    
+    if (is_post_type_archive('Couples')) {
+        $query->set('posts_per_page', 16);
+    }
+    
+    if (is_post_type_archive('Bridals')) {
+        $query->set('posts_per_page', 20);
+    }
+    
+    return;
 }
 
 // Remove wp_head() injected Recent Comment styles
@@ -226,7 +255,7 @@ function my_remove_recent_comments_style()
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function html5wp_pagination()
+function minimalwedding_pagination()
 {
     global $wp_query;
     $big = 999999999;
@@ -239,19 +268,19 @@ function html5wp_pagination()
 }
 
 // Custom Excerpts
-function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
+function minimalwedding_index($length) // Create 20 Word Callback for Index page Excerpts, call using minimalwedding_excerpt('minimalwedding_index');
 {
     return 20;
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
-function html5wp_custom_post($length)
+// Create 40 Word Callback for Custom Post Excerpts, call using minimalwedding_excerpt('minimalwedding_custom_post');
+function minimalwedding_custom_post($length)
 {
     return 40;
 }
 
 // Create the Custom Excerpts callback
-function html5wp_excerpt($length_callback = '', $more_callback = '')
+function minimalwedding_excerpt($length_callback = '', $more_callback = '')
 {
     global $post;
     if (function_exists($length_callback)) {
@@ -268,10 +297,10 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function html5_blank_view_article($more)
+function minimalwedding_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'minimalwedding') . '</a>';
 }
 
 // Remove Admin bar
@@ -281,7 +310,7 @@ function remove_admin_bar()
 }
 
 // Remove 'text/css' from our enqueued stylesheet
-function html5_style_remove($tag)
+function minimalwedding_style_remove($tag)
 {
     return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
 }
@@ -294,7 +323,7 @@ function remove_thumbnail_dimensions( $html )
 }
 
 // Custom Gravatar in Settings > Discussion
-function html5blankgravatar ($avatar_defaults)
+function minimalweddinggravatar ($avatar_defaults)
 {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
@@ -312,7 +341,7 @@ function enable_threaded_comments()
 }
 
 // Custom Comments Callback
-function html5blankcomments($comment, $args, $depth)
+function minimalweddingcomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
@@ -360,14 +389,14 @@ function html5blankcomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
+add_action('init', 'minimalwedding_header_scripts'); // Add Custom Scripts to wp_head
+add_action('wp_print_scripts', 'minimalwedding_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
-add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('wp_enqueue_scripts', 'minimalwedding_styles'); // Add Theme Stylesheet
+add_action('init', 'register_minimalwedding_menu'); // Add Minimal Wedding Menu
+add_action('init', 'create_post_type_minimalwedding'); // Add our Minimal Wedding Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
-add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+add_action('init', 'minimalwedding_pagination'); // Add our minimalwedding Pagination
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -384,7 +413,7 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
-add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion
+add_filter('avatar_defaults', 'minimalweddinggravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -395,9 +424,9 @@ add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <di
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('excerpt_more', 'minimalwedding_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
-add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
+add_filter('style_loader_tag', 'minimalwedding_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 
@@ -405,36 +434,36 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('minimalwedding_shortcode_demo', 'minimalwedding_shortcode_demo'); // You can place [minimalwedding_shortcode_demo] in Pages, Posts now.
+add_shortcode('minimalwedding_shortcode_demo_2', 'minimalwedding_shortcode_demo_2'); // Place [minimalwedding_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
-// [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
+// [minimalwedding_shortcode_demo] [minimalwedding_shortcode_demo_2] Here's the page title! [/minimalwedding_shortcode_demo_2] [/minimalwedding_shortcode_demo]
 
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5()
+// Create 1 Custom Post type for a Demo, called minimalwedding-Blank
+function create_post_type_minimalwedding()
 {
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_taxonomy_for_object_type('category', 'minimalwedding-blank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'minimalwedding-blank');
+    register_post_type('minimalwedding-blank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            'name' => __('Minimal Wedding Custom Post', 'minimalwedding'), // Rename these to suit
+            'singular_name' => __('Minimal Wedding Custom Post', 'minimalwedding'),
+            'add_new' => __('Add New', 'minimalwedding'),
+            'add_new_item' => __('Add New Minimal Wedding Custom Post', 'minimalwedding'),
+            'edit' => __('Edit', 'minimalwedding'),
+            'edit_item' => __('Edit Minimal Wedding Custom Post', 'minimalwedding'),
+            'new_item' => __('New Minimal Wedding Custom Post', 'minimalwedding'),
+            'view' => __('View Minimal Wedding Custom Post', 'minimalwedding'),
+            'view_item' => __('View Minimal Wedding Custom Post', 'minimalwedding'),
+            'search_items' => __('Search Minimal Wedding Custom Post', 'minimalwedding'),
+            'not_found' => __('No Minimal Wedding Custom Posts found', 'minimalwedding'),
+            'not_found_in_trash' => __('No Minimal Wedding Custom Posts found in Trash', 'minimalwedding')
         ),
         'public' => false,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -444,7 +473,7 @@ function create_post_type_html5()
             'editor',
             'excerpt',
             'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        ), // Go to Dashboard Custom Minimal Wedding post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
             'post_tag',
@@ -458,13 +487,13 @@ function create_post_type_html5()
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function html5_shortcode_demo($atts, $content = null)
+function minimalwedding_shortcode_demo($atts, $content = null)
 {
     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
 // Shortcode Demo with simple <h2> tag
-function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+function minimalwedding_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
 }

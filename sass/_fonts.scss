@@ -6,8 +6,8 @@
 \*---------------------------------------------------------*/
 
 $font_header: Dancing Script;
-$font_body: Muli;
-$font_menu: aw-conqueror-didot serif;
+$font_body: Arial, Helvetica, sans-serif;
+$font_menu: "Times New Roman", Times, serif;
 
 $font_header_color: #96b1d2;
 $font_menu_color: #808080;
@@ -22,23 +22,4 @@ $font_body_color: #979797;
   font-style: normal;
   font-weight: 400;
   src: local('Dancing Script'), local('DancingScript'), url(http://fonts.gstatic.com/s/dancingscript/v5/DK0eTGXiZjN6yA8zAEyM2VhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
-}
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Muli Light'), local('Muli-Light'), url(http://fonts.gstatic.com/s/muli/v7/mls_29xz6YyJHsylG8hcCgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2'), url(http://fonts.gstatic.com/s/muli/v7/TgrecWq39GVsTOFonFwGXQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Muli'), url(http://fonts.gstatic.com/s/muli/v7/zscZFkjVRGyfQ_Pw-5exXPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/muli/v7/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Josefin Sans'), local('JosefinSans'), url(https://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5pS3E-kSBmtLoNJPDtbj2Pk.ttf) format('truetype');
 }

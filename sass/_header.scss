@@ -1,49 +1,58 @@
 // _header.scss
- header {
+header {
     width: 100%;
     height: 100%;
     position: fixed;
+    
     @media (max-width: 1000px) {
-        height: 55px;
-        position: fixed;
         width: 100%;
-        top: 0;
         z-index: 99;
         background: #fff;
-    }
-    @media (max-width: 768px) {
+        padding: 5px 10px 0;
         height: 120px;
         position: relative;
         text-align: center;
     }
     h2 {
-        font-family: "aw-conqueror-didot", serif;
+        font-family: "Times New Roman", Times, serif;
     }
 }
+
 .header {
     padding: 25px 10px 10px 10px;
     height: 100%;
-    @media (max-width: 768px) {
-        height: 120px;
-    }
+    
     @media (max-width: 1000px) {
-        height: 100%;
+        height: 120px;
         padding: 5px;
+        
+        br {
+            display: none;
+        }
     }
 }
+
 .logo {
     width: 100%;
-   @media (max-width: 768px) {
-  margin: 30px auto 1px;
-  width: 60%;
+    
+    @media (max-width: 1000px) {
+        margin: 15px auto 10px;
+        width: 75%;
+    }
+    
+    @media (max-width: 768px) {
+        margin: 25px auto 10px;
+        width: 60%;
+    }
 }
-}
+
 .phoneNo {
     text-align: left;
     font-size: 1rem;
     font-family: arial;
     position: absolute;
     bottom: 25px;
+    
     span {
         font-size: 2.25rem;
         margin-bottom: 5px;
@@ -52,18 +61,27 @@
         color: #808080;
     }
     @media (max-width: 1400px) {
-            font-size: .86rem;
-            span {
-                font-size: 2rem;
+        font-size: .86rem;
+        
+        span {
+            font-size: 2rem;
         }
     }
     @media (max-width: 1200px) {
-        font-size: .71rem;
-    span {
-        font-size: 1.65rem;
+        font-size: 1rem;
+        
+        span {
+            font-size: 1.65rem;
+        }
     }
 }
+
+.email a {
+    @media (min-width: 1001px) and (max-width: 1200px) {
+        font-size: .71rem;
+    }
 }
+
 nav {
     margin: 50px 0;
     ul {
@@ -82,11 +100,45 @@ nav {
         }
     }
 }
+
 .slogan {
-    color: #d1d1d3;
+    color: #808080;
     font-family: $font_header;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-top: 30px;
     text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    .slogan {
+        display: none;
+    }
+    nav {
+        margin: 0 auto auto;
+        width: 100%;
+    }
+    nav ul {
+        margin-left: 0;
+    }
+    nav ul li {
+        padding-left: 5px;
+        display: inline-block;
+    }
+    .logo {
+        width: 170px;
+    }
+    .phoneNo {
+        width: 95%;
+        top: 10px;
+    }
+    .phoneNo span {
+        font-size: 1.3rem;
+        float: left;
+    }
+    .phoneNo a {
+        float: right;
+        margin-top: -2px;
+    }
 }

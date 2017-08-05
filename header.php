@@ -31,17 +31,15 @@ $(window).load(function(){
 	</head>
 	<body <?php body_class(); ?>>
 <header>
-		<div class="large-2 medium-2 small-12 columns header">  
-    <div class="row">
+		<div class="medium-12 large-2 columns header">  
       <div class="logo">
-        <a href="/"><img src="http://matthewtrader.com/wp-content/uploads/2014/07/Dallas-Weddings-Logo.png" width="300" height="76"></a>
+        <a href="/weddings"><img src="http://matthewtrader.com/wp-content/uploads/2014/07/Dallas-Weddings-Logo.png" width="300" height="76"></a>
         <div class="slogan">Cherish Love's Story</div>
       </div>
         <nav>
             <?php wp_nav_menu( array('menu' => 'main' )); ?>
         </nav>
-    </div>
-     <div class="phoneNo"><span>972.345.8089</span><br>
+     <div class="phoneNo"><span><a href="tel:972-345-8089">972.345.8089</a></span><br>
         <div class="email"><a href="mailto:matthew@matthewtrader.com">Matthew@MatthewTRader.com</a><br></div>
             <!-- copyright -->
 				<p class="copyright">
@@ -52,4 +50,4 @@ $(window).load(function(){
            </div> 
 </header> 
 			<!-- /header -->
-  <div id="container"  class="large-10 medium-10 small-12 columns container right">
+  <div id="container"  class="medium-12 large-10 columns container right">

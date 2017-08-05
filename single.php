@@ -16,8 +16,10 @@
 			<!-- /post title -->
 
 			<?php the_content(); // Dynamic Content ?>
+			
+			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('post-bottom-content-widget')) ?>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+			<?php wp_related_posts()?>
 
 			<?php comments_template(); ?>
 
@@ -31,7 +33,7 @@
 		<!-- article -->
 		<article>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+			<h1><?php _e( 'Sorry, nothing to display.', 'minimalwedding' ); ?></h1>
 
 		</article>
 		<!-- /article -->
