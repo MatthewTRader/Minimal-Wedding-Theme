@@ -384,6 +384,8 @@ function minimalweddingcomments($comment, $args, $depth)
 	<?php endif; ?>
 <?php }
 
+
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
