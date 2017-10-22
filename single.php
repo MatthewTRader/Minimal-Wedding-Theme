@@ -19,8 +19,6 @@
 			
 			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('post-bottom-content-widget')) ?>
 
-			<?php wp_related_posts()?>
-
 			<?php comments_template(); ?>
 
 		</article>

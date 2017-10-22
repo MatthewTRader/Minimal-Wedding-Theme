@@ -10,12 +10,10 @@ html {
         font-size: 100%;
     }
 }
-p {
+p, li {
 	@extend %extend_basic_text;
 }
-li {
-	@extend %extend_basic_text;
-}
+
 h1 {
 	font-family: $font_header;
 	margin-left: 5px;
@@ -30,6 +28,12 @@ h2 {
     color: #000;
     margin-bottom: 20px;
     color: $font_body_color;
+}
+
+select, input, textarea, input[type="text"] {
+    font-family: $font_body !important;
+	font-size: 1rem !important;
+	color: $font_body_color !important;
 }
 
 .center {

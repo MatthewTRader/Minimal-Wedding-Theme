@@ -56,6 +56,7 @@ header {
     font-family: arial;
     position: absolute;
     bottom: 25px;
+    height: 25px;
     
     span {
         font-size: 1.2rem;
@@ -68,6 +69,10 @@ header {
         span {
             font-size: 1.65rem;
         }
+    }
+    
+    @media (min-width: 1024px) {
+        height: auto;
     }
     
     @media (min-width: 1200px) {
@@ -138,7 +143,7 @@ nav {
         margin-left: 0;
     }
     nav ul li {
-        padding-left: 5px;
+        padding-left: 15px;
         display: inline-block;
     }
     .logo {

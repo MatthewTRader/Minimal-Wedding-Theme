@@ -1,5 +1,4 @@
                                 <?php  /* Template Name: Template Home Page */  get_header(); ?> 
-<div id="dvLoading"></div> 
 <main role="main">
 <div id="slider" class="bxsliderWrapper" style="display:none;">
     <?php

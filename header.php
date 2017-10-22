@@ -12,24 +12,38 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-19917703-7', 'auto');
-  ga('send', 'pageview');
+          ga('create', 'UA-19917703-7', 'auto');
+          ga('send', 'pageview');
 
-</script>
+        </script>
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5XZLWPD');</script>
+        <!-- End Google Tag Manager -->
+
         <?php wp_head(); ?>
-<script>
-$(window).load(function(){
-  $('#dvLoading').fadeOut(2000);
-});
-</script>
+        
+        <script>
+        $(window).load(function(){
+          $('#dvLoading').fadeOut(2000);
+        });
+        </script>
 	</head>
 	<body <?php body_class(); ?>>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZLWPD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header>
 		<div class="medium-12 large-2 columns header">  
       <div class="logo">
@@ -43,7 +57,7 @@ $(window).load(function(){
         <div class="email"><a href="mailto:matthew@matthewtrader.com">Matthew@MatthewTRader.com</a><br></div>
             <!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></a>.
+					&copy; <?php echo date('Y'); ?> Copyright Matthew T Rader</a>.
 				</p>
 				<!-- /copyright -->
             </div>

@@ -533,5 +533,12 @@ function add_alt_tags($content)
 }
 add_filter('the_content', 'add_alt_tags', 99999);
 
+function jetpackme_filter_exclude_category( $filters ) {
+    $filters[] = array( 'not' =>
+      array( 'term' => array( 'category.slug' => 'no-related' ) )
+    );
+    return $filters;
+}
+add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
 
 ?>
