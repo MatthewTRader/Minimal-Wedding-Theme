@@ -1,13 +1,16 @@
                                 <?php  /* Template Name: Template Home Page */  get_header(); ?> 
-<main role="main">
-<div id="slider" class="bxsliderWrapper" style="display:none;">
+    <div class="home-images">
     <?php
     $myposts = get_posts('numberposts=15&category_name=Featured');
     foreach($myposts as $post) : ?>
-    <div class="homeSlider">
-      <?php
+      
+           <?php
+        
             if ( wp_is_mobile() ) { ?>
-                <div class="homeSlides" style="background-image:url('<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'homepage-slider-mobile' ); echo $thumb['0'];?>');background-position:<?php the_field('position'); ?>;">
+              
+               <div class="home-image" >
+               
+                <amp-img  src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'homepage-slider-mobile' ); echo $thumb['0'];?>" height="11.1" width="16" layout="responsive"></amp-img>
                 
                     <h2>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
@@ -15,8 +18,10 @@
               </div>
                 
          <?php   } else { ?>
-               
-                <div class="homeSlides" style="background-image:url('<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'homepage-slider' ); echo $thumb['0'];?>');background-position:<?php the_field('position'); ?>;">
+            
+             <div class="home-image" > 
+             
+              <amp-img class="home-image" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'homepage-slider' ); echo $thumb['0'];?>" height="11.1" width="16" layout="responsive"></amp-img>
                 
                     <h2>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
@@ -24,9 +29,8 @@
               </div>
                 
                 
-         <?php  } ?>
-  </div> 
+         <?php } ?>
+
 <?php endforeach; ?>
     </div>
-    </main>
 <?php get_footer(); ?>

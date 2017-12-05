@@ -1,4 +1,4 @@
-# [Minimal Wedding](http://minimalwedding.com) License
+# [Minimal Wedding](http://matthewtrader.com) License
 
 ## MIT License
 

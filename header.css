@@ -1,0 +1,44 @@
+/*
+Error: Inconsistent indentation: 12 spaces were used for indentation, but the rest of the document was indented using 1 tab.
+        on line 8 of header.php
+
+3: 	<head>
+4: 		<meta charset="<?php bloginfo('charset'); ?>">
+5: 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+6: <script async src="https://cdn.ampproject.org/v0.js"></script>
+7: <style amp-custom>
+8:             @import 'fonts.scss';
+9:             @import 'core.scss';
+10:             @import 'header.scss';
+11:             @import 'homepage.scss';
+12:             @import 'welcomepage.scss';
+13:             @import 'pages.scss';
+
+Backtrace:
+header.php:8
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:494:in `block in tabulate'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:452:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:452:in `each_with_index'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:452:in `tabulate'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:417:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: 12 spaces were used for indentation, but the rest of the document was indented using 1 tab.\A         on line 8 of header.php\A \A 3: 	<head>\A 4: 		<meta charset=\"<?php bloginfo('charset'); ?>\">\A 5: 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>\A 6: <script async src=\"https://cdn.ampproject.org/v0.js\"></script>\A 7: <style amp-custom>\A 8:             @import 'fonts.scss';\A 9:             @import 'core.scss';\A 10:             @import 'header.scss';\A 11:             @import 'homepage.scss';\A 12:             @import 'welcomepage.scss';\A 13:             @import 'pages.scss';"; }

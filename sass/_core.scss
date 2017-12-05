@@ -18,9 +18,11 @@ h1 {
 	font-family: $font_header;
 	margin-left: 5px;
     font-size: 3rem;
+    color: $font_header_color;
 }
 h2, h3, h4, h5, h6 {
 	font-family: $font_body;
+    color: $font_header_color;
 }
 
 h2 {
@@ -73,20 +75,8 @@ a {
 		}
 	}
 }
-.zeroPadding {
-	padding: 0;
-}
+
 main {
-}
-.column {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.columns {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-#container {
 	width: 83%;
 	padding: 25px 0;
 	background: none repeat scroll 0 0 $bg_body_color;

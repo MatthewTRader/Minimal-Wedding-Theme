@@ -1,67 +1,57 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="http://matthewtrader.com/wp-content/uploads/2013/02/Photographer-favicon.png" rel="shortcut icon">
-        <link href="http://matthewtrader.com/wp-content/uploads/2013/02/Photographer-favicon.png" rel="apple-touch-icon-precomposed">
-		<meta name="msvalidate.01" content="E93BA045C27D82721206AA9920042240" />
-                <meta name='yandex-verification' content='6fe1c40b06cdc1e1' />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title>
+        <?php wp_title(''); ?>
+        <?php if(wp_title('', false)) { echo ' :'; } ?>
+        <?php bloginfo('name'); ?>
+    </title>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-custom>
+        <?php include 'style-amp.css';
+        ?>
+    </style>
 
-          ga('create', 'UA-19917703-7', 'auto');
-          ga('send', 'pageview');
+    <style amp-boilerplate>
+        <?php include 'amp-boilerplate.css';
+        ?>
+    </style>
+    <noscript>
+    <style amp-boilerplate>
+        body { 
+            -webkit-animation:none;
+            -moz-animation:none;
+            -ms-animation:none;
+            animation:none
+        }
+    </style>
+    </noscript>
 
-        </script>
-        
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5XZLWPD');</script>
-        <!-- End Google Tag Manager -->
+    <?php wp_head(); ?>
+</head>
 
-        <?php wp_head(); ?>
-        
-        <script>
-        $(window).load(function(){
-          $('#dvLoading').fadeOut(2000);
-        });
-        </script>
-	</head>
-	<body <?php body_class(); ?>>
-	<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZLWPD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header>
-		<div class="medium-12 large-2 columns header">  
-      <div class="logo">
-        <a href="/weddings"><img src="http://matthewtrader.com/wp-content/uploads/2014/07/Dallas-Weddings-Logo.png" width="300" height="76"></a>
-        <div class="slogan">Cherish Love's Story</div>
-      </div>
-        <nav>
-            <?php wp_nav_menu( array('menu' => 'main' )); ?>
-        </nav>
-     <div class="phoneNo"><span><a href="tel:972-345-8089">972.345.8089</a></span><br>
-        <div class="email"><a href="mailto:matthew@matthewtrader.com">Matthew@MatthewTRader.com</a><br></div>
-            <!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright Matthew T Rader</a>.
-				</p>
-				<!-- /copyright -->
+<body <?php body_class(); ?>>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="/weddings"><amp-img src="http://matthewtrader.com/wp-content/uploads/2014/07/Dallas-Weddings-Logo.png" width="300" height="76" layout="responsive"></amp-img></a>
+                <div class="slogan">Cherish Love's Story</div>
             </div>
-           </div> 
-</header> 
-			<!-- /header -->
-  <div id="container"  class="medium-12 large-10 columns container right">
+            <nav>
+                <?php wp_nav_menu( array('menu' => 'main' )); ?>
+            </nav>
+            <div class="phoneNo"><span><a href="tel:972-345-8089">972.345.8089</a></span><br>
+                <div class="email"><a href="mailto:matthew@matthewtrader.com">Matthew@MatthewTRader.com</a><br></div>
+                <!-- copyright -->
+                <p class="copyright">
+                    &copy;
+                    <?php echo date('Y'); ?> Copyright Matthew T Rader</a>.
+                </p>
+                <!-- /copyright -->
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <main role="main">

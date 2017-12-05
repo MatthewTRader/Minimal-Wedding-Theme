@@ -11,7 +11,7 @@
             <!-- post thumbnail -->
             <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php the_post_thumbnail('large'); // Declare pixel size you need inside the array ?>
+                   <amp-img class="home-image" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); echo $thumb['0'];?>" height="11.1" width="16" layout="responsive"></amp-img>
                 </a>
             <?php endif; ?>
             <!-- /post thumbnail -->

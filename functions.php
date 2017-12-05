@@ -94,44 +94,44 @@ function minimalwedding_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
-
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
-        
-        wp_register_script('vendor', get_template_directory_uri() . '/js/vendor/jquery.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('vendor'); // Enqueue it!
-
-       wp_register_script('foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('foundation'); // Enqueue it!
-        
-        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('bxslider'); // Enqueue it!
-        
-         wp_register_script('minimalweddingscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('minimalweddingscripts'); // Enqueue it!
+//    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+//        wp_enqueue_script('conditionizr'); // Enqueue it!
+//
+//        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+//        wp_enqueue_script('modernizr'); // Enqueue it!
+//        
+//        wp_register_script('vendor', get_template_directory_uri() . '/js/vendor/jquery.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('vendor'); // Enqueue it!
+//
+//       wp_register_script('foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('foundation'); // Enqueue it!
+//        
+//        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('bxslider'); // Enqueue it!
+//        
+//         wp_register_script('minimalweddingscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('minimalweddingscripts'); // Enqueue it!
   
     
     }
 }
 
-// Load Minimal Wedding conditional scripts
-function minimalwedding_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
-}
-
-// Load Minimal Wedding styles
-function minimalwedding_styles()
-{
-
-    wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), 'all');
-    wp_enqueue_style('stylesheet'); // Enqueue it!
-}
+//// Load Minimal Wedding conditional scripts
+//function minimalwedding_conditional_scripts()
+//{
+//    if (is_page('pagenamehere')) {
+//        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+//        wp_enqueue_script('scriptname'); // Enqueue it!
+//    }
+//}
+//
+//// Load Minimal Wedding styles
+//function minimalwedding_styles()
+//{
+//
+//    wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), 'all');
+//    wp_enqueue_style('stylesheet'); // Enqueue it!
+//}
 
 // Register Minimal Wedding Navigation
 function register_minimalwedding_menu()
@@ -232,7 +232,7 @@ add_action('pre_get_posts', 'custom_per_page');
 function custom_per_page(&$query) {
     
     if (is_post_type_archive('Weddings')) {
-        $query->set('posts_per_page', 20);
+        $query->set('posts_per_page', 26);
     }
     
     if (is_post_type_archive('Couples')) {
@@ -540,5 +540,65 @@ function jetpackme_filter_exclude_category( $filters ) {
     return $filters;
 }
 add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
+
+
+add_filter('post_gallery', 'my_post_gallery', 10, 2);
+function my_post_gallery($output, $attr) {
+    global $post;
+
+    if (isset($attr['orderby'])) {
+        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+        if (!$attr['orderby'])
+            unset($attr['orderby']);
+    }
+
+    extract(shortcode_atts(array(
+        'order' => 'ASC',
+        'orderby' => 'menu_order ID',
+        'id' => $post->ID,
+        'itemtag' => 'dl',
+        'icontag' => 'dt',
+        'captiontag' => 'dd',
+        'columns' => 3,
+        'size' => 'thumbnail',
+        'include' => '',
+        'exclude' => ''
+    ), $attr));
+
+    $id = intval($id);
+    if ('RAND' == $order) $orderby = 'none';
+
+    if (!empty($include)) {
+        $include = preg_replace('/[^0-9,]+/', '', $include);
+        $_attachments = get_posts(array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby));
+
+        $attachments = array();
+        foreach ($_attachments as $key => $val) {
+            $attachments[$val->ID] = $_attachments[$key];
+        }
+    }
+
+    if (empty($attachments)) return '';
+
+    // Here's your actual output, you may customize it to your need
+    $output = "<div class=\"gallery\">\n";
+
+    // Now you loop through each attachment
+    foreach ($attachments as $id => $attachment) {
+        // Fetch the thumbnail (or full image, it's up to you)
+//      $img = wp_get_attachment_image_src($id, 'medium');
+//      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
+        $img = wp_get_attachment_image_src($id, 'full');
+
+        $output .= "<amp-img  layout=\"responsive\" src=\"{$img[0]}\" width=\"{$img[1]}\" height=\"{$img[2]}\" alt=\"\" />\n";
+        $output .= "</amp-img>\n";
+    }
+
+    $output .= "</div>\n";
+
+    return $output;
+}
+
+
 
 ?>
