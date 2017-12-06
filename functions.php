@@ -34,38 +34,19 @@ if (function_exists('add_theme_support'))
     add_image_size('homepage-slider-mobile', 768, 768, true); // Large Thumbnail
     add_image_size('homepage-slider', 1600, 1600, true); // Large Thumbnail
 
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
-
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
-
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
-    load_theme_textdomain('minimalwedding', get_template_directory() . '/languages');
+    load_theme_textdomain('ultraPhoto', get_template_directory() . '/languages');
 }
 
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
 
-// Minimal Wedding navigation
-function minimalwedding_nav()
+// Ultra Photo navigation
+function ultraPhoto_nav()
 {
 	wp_nav_menu(
 	array(
@@ -89,11 +70,11 @@ function minimalwedding_nav()
 	);
 }
 
-// Load Minimal Wedding scripts (header.php)
-function minimalwedding_header_scripts()
-{
-    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
+// Load Ultra Photo scripts (header.php)
+//function ultraPhoto_header_scripts()
+//{
+//    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+//
 //    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
 //        wp_enqueue_script('conditionizr'); // Enqueue it!
 //
@@ -109,15 +90,15 @@ function minimalwedding_header_scripts()
 //        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '1.0.0'); // Custom scripts
 //        wp_enqueue_script('bxslider'); // Enqueue it!
 //        
-//         wp_register_script('minimalweddingscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-//        wp_enqueue_script('minimalweddingscripts'); // Enqueue it!
-  
-    
-    }
-}
-
-//// Load Minimal Wedding conditional scripts
-//function minimalwedding_conditional_scripts()
+//         wp_register_script('ultraPhotoscripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('ultraPhotoscripts'); // Enqueue it!
+//  
+//    
+//    }
+//}
+//
+//// Load Ultra Photo conditional scripts
+//function ultraPhoto_conditional_scripts()
 //{
 //    if (is_page('pagenamehere')) {
 //        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
@@ -125,21 +106,21 @@ function minimalwedding_header_scripts()
 //    }
 //}
 //
-//// Load Minimal Wedding styles
-//function minimalwedding_styles()
+//// Load Ultra Photo styles
+//function ultraPhoto_styles()
 //{
 //
 //    wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), 'all');
 //    wp_enqueue_style('stylesheet'); // Enqueue it!
 //}
 
-// Register Minimal Wedding Navigation
-function register_minimalwedding_menu()
+// Register Ultra Photo Navigation
+function register_ultraPhoto_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'minimalwedding'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'minimalwedding'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'minimalwedding') // Extra Navigation if needed (duplicate as many as you need!)
+        'header-menu' => __('Header Menu', 'ultraPhoto'), // Main Navigation
+        'sidebar-menu' => __('Sidebar Menu', 'ultraPhoto'), // Sidebar Navigation
+        'extra-menu' => __('Extra Menu', 'ultraPhoto') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -196,8 +177,8 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'minimalwedding'),
-        'description' => __('Description for this widget-area...', 'minimalwedding'),
+        'name' => __('Widget Area 1', 'ultraPhoto'),
+        'description' => __('Description for this widget-area...', 'ultraPhoto'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -207,8 +188,8 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'minimalwedding'),
-        'description' => __('Description for this widget-area...', 'minimalwedding'),
+        'name' => __('Widget Area 2', 'ultraPhoto'),
+        'description' => __('Description for this widget-area...', 'ultraPhoto'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -217,8 +198,8 @@ if (function_exists('register_sidebar'))
     ));
     // Define Posts Bottom Content Widget
     register_sidebar(array(
-        'name' => __('Posts Bottom Content Widget', 'minimalwedding'),
-        'description' => __('For Content Appearing Below Posts Content', 'minimalwedding'),
+        'name' => __('Posts Bottom Content Widget', 'ultraPhoto'),
+        'description' => __('For Content Appearing Below Posts Content', 'ultraPhoto'),
         'id' => 'post-bottom-content-widget',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -231,16 +212,8 @@ add_action('pre_get_posts', 'custom_per_page');
 
 function custom_per_page(&$query) {
     
-    if (is_post_type_archive('Weddings')) {
-        $query->set('posts_per_page', 26);
-    }
-    
-    if (is_post_type_archive('Couples')) {
-        $query->set('posts_per_page', 16);
-    }
-    
-    if (is_post_type_archive('Bridals')) {
-        $query->set('posts_per_page', 20);
+    if (is_post_type_archive()) {
+        $query->set('posts_per_page', 24);
     }
     
     return;
@@ -257,7 +230,7 @@ function my_remove_recent_comments_style()
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function minimalwedding_pagination()
+function ultraPhoto_pagination()
 {
     global $wp_query;
     $big = 999999999;
@@ -270,19 +243,19 @@ function minimalwedding_pagination()
 }
 
 // Custom Excerpts
-function minimalwedding_index($length) // Create 20 Word Callback for Index page Excerpts, call using minimalwedding_excerpt('minimalwedding_index');
+function ultraPhoto_index($length) // Create 20 Word Callback for Index page Excerpts, call using ultraPhoto_excerpt('ultraPhoto_index');
 {
     return 20;
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using minimalwedding_excerpt('minimalwedding_custom_post');
-function minimalwedding_custom_post($length)
+// Create 40 Word Callback for Custom Post Excerpts, call using ultraPhoto_excerpt('ultraPhoto_custom_post');
+function ultraPhoto_custom_post($length)
 {
     return 40;
 }
 
 // Create the Custom Excerpts callback
-function minimalwedding_excerpt($length_callback = '', $more_callback = '')
+function ultraPhoto_excerpt($length_callback = '', $more_callback = '')
 {
     global $post;
     if (function_exists($length_callback)) {
@@ -299,10 +272,10 @@ function minimalwedding_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function minimalwedding_blank_view_article($more)
+function ultraPhoto_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'minimalwedding') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'ultraPhoto') . '</a>';
 }
 
 // Remove Admin bar
@@ -312,7 +285,7 @@ function remove_admin_bar()
 }
 
 // Remove 'text/css' from our enqueued stylesheet
-function minimalwedding_style_remove($tag)
+function ultraPhoto_style_remove($tag)
 {
     return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
 }
@@ -325,7 +298,7 @@ function remove_thumbnail_dimensions( $html )
 }
 
 // Custom Gravatar in Settings > Discussion
-function minimalweddinggravatar ($avatar_defaults)
+function ultraPhotogravatar ($avatar_defaults)
 {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
@@ -343,7 +316,7 @@ function enable_threaded_comments()
 }
 
 // Custom Comments Callback
-function minimalweddingcomments($comment, $args, $depth)
+function ultraPhotocomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
@@ -393,14 +366,14 @@ function minimalweddingcomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-add_action('init', 'minimalwedding_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'minimalwedding_conditional_scripts'); // Add Conditional Page Scripts
+add_action('init', 'ultraPhoto_header_scripts'); // Add Custom Scripts to wp_head
+add_action('wp_print_scripts', 'ultraPhoto_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('wp_enqueue_scripts', 'minimalwedding_styles'); // Add Theme Stylesheet
-add_action('init', 'register_minimalwedding_menu'); // Add Minimal Wedding Menu
-add_action('init', 'create_post_type_minimalwedding'); // Add our Minimal Wedding Custom Post Type
+add_action('wp_enqueue_scripts', 'ultraPhoto_styles'); // Add Theme Stylesheet
+add_action('init', 'register_ultraPhoto_menu'); // Add Ultra Photo Menu
+add_action('init', 'create_post_type_ultraPhoto'); // Add our Ultra Photo Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
-add_action('init', 'minimalwedding_pagination'); // Add our minimalwedding Pagination
+add_action('init', 'ultraPhoto_pagination'); // Add our ultraPhoto Pagination
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -415,9 +388,12 @@ remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 
 // Add Filters
-add_filter('avatar_defaults', 'minimalweddinggravatar'); // Custom Gravatar in Settings > Discussion
+add_filter('avatar_defaults', 'ultraPhotogravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -428,9 +404,8 @@ add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <di
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter('excerpt_more', 'minimalwedding_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
-add_filter('style_loader_tag', 'minimalwedding_style_remove'); // Remove 'text/css' from enqueued stylesheet
+add_filter('excerpt_more', 'ultraPhoto_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('style_loader_tag', 'ultraPhoto_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 
@@ -438,36 +413,36 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('minimalwedding_shortcode_demo', 'minimalwedding_shortcode_demo'); // You can place [minimalwedding_shortcode_demo] in Pages, Posts now.
-add_shortcode('minimalwedding_shortcode_demo_2', 'minimalwedding_shortcode_demo_2'); // Place [minimalwedding_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('ultraPhoto_shortcode_demo', 'ultraPhoto_shortcode_demo'); // You can place [ultraPhoto_shortcode_demo] in Pages, Posts now.
+add_shortcode('ultraPhoto_shortcode_demo_2', 'ultraPhoto_shortcode_demo_2'); // Place [ultraPhoto_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
-// [minimalwedding_shortcode_demo] [minimalwedding_shortcode_demo_2] Here's the page title! [/minimalwedding_shortcode_demo_2] [/minimalwedding_shortcode_demo]
+// [ultraPhoto_shortcode_demo] [ultraPhoto_shortcode_demo_2] Here's the page title! [/ultraPhoto_shortcode_demo_2] [/ultraPhoto_shortcode_demo]
 
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called minimalwedding-Blank
-function create_post_type_minimalwedding()
+// Create 1 Custom Post type for a Demo, called ultraPhoto-Blank
+function create_post_type_ultraPhoto()
 {
-    register_taxonomy_for_object_type('category', 'minimalwedding-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'minimalwedding-blank');
-    register_post_type('minimalwedding-blank', // Register Custom Post Type
+    register_taxonomy_for_object_type('category', 'ultraPhoto-blank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'ultraPhoto-blank');
+    register_post_type('ultraPhoto-blank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('Minimal Wedding Custom Post', 'minimalwedding'), // Rename these to suit
-            'singular_name' => __('Minimal Wedding Custom Post', 'minimalwedding'),
-            'add_new' => __('Add New', 'minimalwedding'),
-            'add_new_item' => __('Add New Minimal Wedding Custom Post', 'minimalwedding'),
-            'edit' => __('Edit', 'minimalwedding'),
-            'edit_item' => __('Edit Minimal Wedding Custom Post', 'minimalwedding'),
-            'new_item' => __('New Minimal Wedding Custom Post', 'minimalwedding'),
-            'view' => __('View Minimal Wedding Custom Post', 'minimalwedding'),
-            'view_item' => __('View Minimal Wedding Custom Post', 'minimalwedding'),
-            'search_items' => __('Search Minimal Wedding Custom Post', 'minimalwedding'),
-            'not_found' => __('No Minimal Wedding Custom Posts found', 'minimalwedding'),
-            'not_found_in_trash' => __('No Minimal Wedding Custom Posts found in Trash', 'minimalwedding')
+            'name' => __('Ultra Photo Custom Post', 'ultraPhoto'), // Rename these to suit
+            'singular_name' => __('Ultra Photo Custom Post', 'ultraPhoto'),
+            'add_new' => __('Add New', 'ultraPhoto'),
+            'add_new_item' => __('Add New Ultra Photo Custom Post', 'ultraPhoto'),
+            'edit' => __('Edit', 'ultraPhoto'),
+            'edit_item' => __('Edit Ultra Photo Custom Post', 'ultraPhoto'),
+            'new_item' => __('New Ultra Photo Custom Post', 'ultraPhoto'),
+            'view' => __('View Ultra Photo Custom Post', 'ultraPhoto'),
+            'view_item' => __('View Ultra Photo Custom Post', 'ultraPhoto'),
+            'search_items' => __('Search Ultra Photo Custom Post', 'ultraPhoto'),
+            'not_found' => __('No Ultra Photo Custom Posts found', 'ultraPhoto'),
+            'not_found_in_trash' => __('No Ultra Photo Custom Posts found in Trash', 'ultraPhoto')
         ),
         'public' => false,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -477,7 +452,7 @@ function create_post_type_minimalwedding()
             'editor',
             'excerpt',
             'thumbnail'
-        ), // Go to Dashboard Custom Minimal Wedding post for supports
+        ), // Go to Dashboard Custom Ultra Photo post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
             'post_tag',
@@ -491,13 +466,13 @@ function create_post_type_minimalwedding()
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function minimalwedding_shortcode_demo($atts, $content = null)
+function ultraPhoto_shortcode_demo($atts, $content = null)
 {
     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
 // Shortcode Demo with simple <h2> tag
-function minimalwedding_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+function ultraPhoto_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
 }
@@ -508,7 +483,7 @@ function add_suf_hatom_data($content) {
     $author = get_the_author();
     $title = get_the_title();
 if (is_home() || is_singular() || is_archive() ) {
-        $content .= '<div class="hatom-extra" style="display:none;visibility:hidden;"><span class="entry-title">'.$title.'</span> was last modified: <span class="updated"> '.$t.'</span> by <span class="author vcard"><span class="fn">'.$author.'</span></span></div>';
+        $content .= '<div class="hatom-extra"><span class="entry-title">'.$title.'</span> was last modified: <span class="updated"> '.$t.'</span> by <span class="author vcard"><span class="fn">'.$author.'</span></span></div>';
     }
     return $content;
     }
@@ -598,6 +573,30 @@ function my_post_gallery($output, $attr) {
 
     return $output;
 }
+
+// Remove jQuery Migrate Script from header and Load jQuery from Google API
+function crunchify_stop_loading_wp_embed_and_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('wp-embed');
+		wp_deregister_script('jquery');  // Bonus: remove jquery too if it's not required
+	}
+}
+add_action('init', 'crunchify_stop_loading_wp_embed_and_jquery');
+
+
+function minimalPhoto_customize_register( $wp_customize ) {
+    $wp_customize->add_setting( 'minimalPhoto_logo' ); // Add setting for logo uploader
+         
+    // Add control for logo uploader (actual uploader)
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ultraPhoto_logo', array(
+        'label'    => __( 'Upload Logo (replaces text)', 'minimalPhoto' ),
+        'section'  => 'title_tagline',
+        'settings' => 'minimalPhoto_logo',
+    ) ) );
+    
+    
+}
+add_action( 'customize_register', 'ec_customize_register' );
 
 
 

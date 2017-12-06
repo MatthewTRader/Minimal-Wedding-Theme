@@ -1,5 +1,5 @@
 <!-- pagination -->
 <div class="pagination">
-	<?php minimalwedding_pagination(); ?>
+	<?php ultraPhoto_pagination(); ?>
 </div>
 <!-- /pagination -->

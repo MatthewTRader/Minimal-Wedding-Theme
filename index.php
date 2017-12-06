@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( 'Latest Posts', 'minimalwedding' ); ?></h1>
+			<h1><?php _e( 'Latest Posts', 'ultraPhoto' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

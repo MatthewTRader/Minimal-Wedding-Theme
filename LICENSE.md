@@ -1,8 +1,8 @@
-# [Minimal Wedding](http://matthewtrader.com) License
+# [Ultra Photo](http://matthewtrader.com) License
 
 ## MIT License
 
-Copyright &copy; 2017 Minimal Wedding // @matthew_t_rader
+Copyright &copy; 2017 Ultra Photo // @matthew_t_rader
 
 Built by Matthew T Rader // @matthew_t_rader
 

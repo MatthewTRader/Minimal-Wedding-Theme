@@ -10,7 +10,7 @@ p {
 
 .post {
     .tiled-gallery-caption {
-        display: none !important;
+        display: none;
     }
 }
 
@@ -25,7 +25,7 @@ p {
          grid-template-columns: 33% 33% 33%;
     }
     
-    .i-amphtml-fill-content {
+    img {
         object-fit: cover;
     }
 }
@@ -72,57 +72,6 @@ p {
     }
 }
 
-.wedding-q {
-    padding: 20px;
-
-    .left-column {
-        width: 100%;
-
-        @media (min-width: 769px) {
-            width:50%;
-            float: left;
-            padding: 40px 20px;
-        }
-    }
-
-    .right-column {
-        width: 100%;
-
-        @media (min-width: 769px) {
-            width:50%;
-            float: left;
-            padding: 40px 20px;
-        }
-    }
-
-    .wpcf7-submit {
-        border: none;
-        box-shadow: none;
-        background: $font_header_color;
-        color: #fff !important;
-        padding: 10px 50px;
-        font-weight: 700;
-    }
-    textarea {
-        height: 100px;
-        border: 1px solid #ddd;
-    }
-    input {
-        font-family: Arial, Helvetica, sans-serif;
-        border: 1px solid #ddd;
-    }
-
-    label,
-    p {
-        font-family: Arial, Helvetica, sans-serif;
-        color: $font_body_color;
-        font-size: 0.875rem;
-    }
-    br {
-        display: none !important;
-    }
-}
-
 .testi-widget {
     padding: 10px;
     width: 100%;
@@ -135,26 +84,28 @@ p {
 
 
 .articles {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    display: grid;
+    padding: 0 10px;
+    
+    @media (min-width: 769px) {
+        grid-template-columns: 50% 50%;
+    }
 
     article {
         margin-bottom: 40px;
         text-align: center;
-        -webkit-flex: 1 1 100%;
-        flex: 1 1 100%;
+        padding: 0 10px;
 
         @media (min-width: 769px) {
             -webkit-flex: 1 1 50%;
             flex: 1 1 50%;
             padding: 10px;
+            
+            &:hover {
+                h2 a {
+                  color: $font_header_color;  
+                }
+            }
         }
 
         img {
@@ -226,10 +177,10 @@ main {
         overflow: hidden;
     }
     .wp_rp_content ul.related_post li {
-        clear: none !important;
-        display: inline-block !important;
+        clear: none;
+        display: inline-block;
         float: left;
-        width: 50% !important;
-        margin: 0 !important;
+        width: 50%;
+        margin: 0;
     }
 }

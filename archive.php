@@ -3,7 +3,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( 'Archives', 'minimalwedding' ); ?></h1>
+			<h1><?php _e( 'Archives', 'ultraPhoto' ); ?></h1>
             
 			 <?php get_template_part('loop'); ?>
 			

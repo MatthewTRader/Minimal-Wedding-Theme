@@ -12,8 +12,15 @@
     padding: 5px 10px;
     position: absolute;
     right: 0;
-    top: -4px;
+    top: -23px;
     font-size: 1rem;
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+    z-index: 100;
+    
     
     @media (min-width: 375px) {
         font-size: 1.4rem;
@@ -21,15 +28,24 @@
     
     @media (min-width: 769px) {
         font-size: 1.7rem;
+        
+        &:hover {
+            background: none repeat scroll 0 0 rgba(119, 119, 119, 0.9);
+        }
     }
 }
 
 .page-template-template-home-page-php .home-images h2 a {
-    color: #fff;
+    color: #dfdfdf;
 }
 
 .page-template-template-home-page-php .home-images h2:hover a {
     color: $font_header_color;
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    transition:all 0.3s ease;
     
     @media (min-width: 769px) {
         color: #fff;

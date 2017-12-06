@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Minimal Wedding WordPress Theme\n"
+"Project-Id-Version: Ultra Photo WordPress Theme\n"
 "POT-Creation-Date: 2013-09-18 00:26+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Sallay Arnold <arnold@sallay.info>\n"
@@ -122,44 +122,44 @@ msgid "(Edit)"
 msgstr "(Szerkesztés)"
 
 #: ../functions.php:411 ../functions.php:412
-msgid "Minimal Wedding Custom Post"
-msgstr "Minimal Wedding Egyedi Tartalom"
+msgid "Ultra Photo Custom Post"
+msgstr "Ultra Photo Egyedi Tartalom"
 
 #: ../functions.php:413
 msgid "Add New"
 msgstr "Új hozzáadása"
 
 #: ../functions.php:414
-msgid "Add New Minimal Wedding Custom Post"
-msgstr "Új egyedi Minimal Wedding tartalom hozzáadása"
+msgid "Add New Ultra Photo Custom Post"
+msgstr "Új egyedi Ultra Photo tartalom hozzáadása"
 
 #: ../functions.php:415
 msgid "Edit"
 msgstr "Szerkesztés"
 
 #: ../functions.php:416
-msgid "Edit Minimal Wedding Custom Post"
-msgstr "Minimal Wedding egyedi tartalom szerkesztése"
+msgid "Edit Ultra Photo Custom Post"
+msgstr "Ultra Photo egyedi tartalom szerkesztése"
 
 #: ../functions.php:417
-msgid "New Minimal Wedding Custom Post"
-msgstr "Új Minimal Wedding egyedi tartalom"
+msgid "New Ultra Photo Custom Post"
+msgstr "Új Ultra Photo egyedi tartalom"
 
 #: ../functions.php:418 ../functions.php:419
-msgid "View Minimal Wedding Custom Post"
-msgstr "Minimal Wedding egyedi tartalom megtekintése"
+msgid "View Ultra Photo Custom Post"
+msgstr "Ultra Photo egyedi tartalom megtekintése"
 
 #: ../functions.php:420
-msgid "Search Minimal Wedding Custom Post"
-msgstr "Minimal Wedding egyedi tartalomak keresése"
+msgid "Search Ultra Photo Custom Post"
+msgstr "Ultra Photo egyedi tartalomak keresése"
 
 #: ../functions.php:421
-msgid "No Minimal Wedding Custom Posts found"
-msgstr "Nincs Minimal Wedding egyedi tartalom"
+msgid "No Ultra Photo Custom Posts found"
+msgstr "Nincs Ultra Photo egyedi tartalom"
 
 #: ../functions.php:422
-msgid "No Minimal Wedding Custom Posts found in Trash"
-msgstr "Nincs Minimal Wedding egyedi tartalom a kukában"
+msgid "No Ultra Photo Custom Posts found in Trash"
+msgstr "Nincs Ultra Photo egyedi tartalom a kukában"
 
 #: ../index.php:6
 msgid "Latest Posts"

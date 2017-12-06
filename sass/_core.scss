@@ -2,6 +2,17 @@
                       Core Styles
 \*---------------------------------------------------------*/
 
+
+html, body, p, li, a, h1, h2, h3, h4, h5, h6, img {
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 html {
 	font-family: $font_menu;
 	font-size: 80%;
@@ -33,9 +44,9 @@ h2 {
 }
 
 select, input, textarea, input[type="text"] {
-    font-family: $font_body !important;
-	font-size: 1rem !important;
-	color: $font_body_color !important;
+    font-family: $font_body;
+	font-size: 1rem;
+	color: $font_body_color;
 }
 
 .center {
@@ -81,25 +92,18 @@ main {
 	padding: 25px 0;
 	background: none repeat scroll 0 0 $bg_body_color;
 }
-article {
-	padding: 0 15px;
-}
+
 img {
 	max-width: 100%;
 	vertical-align: bottom;
+    
 	&#wpstats {
 		visibility: hidden;
 		height: 0;
 	}
 }
-*, *:after, *:before {
-	box-sizing: border-box;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-}
 
 .clear {
-	*zoom: 1;
 	&:before {
 		content: ' ';
 		display: table;
@@ -178,4 +182,9 @@ input:focus {
 div.aligncenter {
 	display: block;
 	margin: 5px auto 5px auto;
+}
+
+.hatom-extra {
+    display:none;
+    visibility:hidden;
 }

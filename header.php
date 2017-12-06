@@ -1,8 +1,10 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" ⚡>
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="$SOME_URL">
     <title>
         <?php wp_title(''); ?>
         <?php if(wp_title('', false)) { echo ' :'; } ?>
@@ -10,24 +12,10 @@
     </title>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-custom>
-        <?php include 'style-amp.css';
-        ?>
+        <?php include 'style-amp.css';?>
     </style>
 
-    <style amp-boilerplate>
-        <?php include 'amp-boilerplate.css';
-        ?>
-    </style>
-    <noscript>
-    <style amp-boilerplate>
-        body { 
-            -webkit-animation:none;
-            -moz-animation:none;
-            -ms-animation:none;
-            animation:none
-        }
-    </style>
-    </noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <?php wp_head(); ?>
 </head>
@@ -36,7 +24,7 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a href="/weddings"><amp-img src="http://matthewtrader.com/wp-content/uploads/2014/07/Dallas-Weddings-Logo.png" width="300" height="76" layout="responsive"></amp-img></a>
+                <a href="<?php echo home_url(); ?>"><amp-img src="<?php echo get_theme_mod( 'minimalPhoto_logo' ) ?>" width="300" height="76" layout="responsive"></amp-img></a>
                 <div class="slogan">Cherish Love's Story</div>
             </div>
             <nav>

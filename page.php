@@ -26,7 +26,7 @@
 			<!-- article -->
 			<article>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'minimalwedding' ); ?></h2>
+				<h2><?php _e( 'Sorry, nothing to display.', 'ultraPhoto' ); ?></h2>
 
 			</article>
 			<!-- /article -->

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Minimal Wedding WordPress Theme\n"
+"Project-Id-Version: Ultra Photo WordPress Theme\n"
 "POT-Creation-Date: 2013-09-18 00:25+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jürgen Rabe | www.egado.de <rabe@egado.de>\n"
@@ -122,44 +122,44 @@ msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
 #: ../functions.php:411 ../functions.php:412
-msgid "Minimal Wedding Custom Post"
-msgstr "Minimal Wedding Custom Post-Type"
+msgid "Ultra Photo Custom Post"
+msgstr "Ultra Photo Custom Post-Type"
 
 #: ../functions.php:413
 msgid "Add New"
 msgstr "Neuen Artikel erstellen"
 
 #: ../functions.php:414
-msgid "Add New Minimal Wedding Custom Post"
-msgstr "Neuen Minimal Wedding Custom Post erstellen"
+msgid "Add New Ultra Photo Custom Post"
+msgstr "Neuen Ultra Photo Custom Post erstellen"
 
 #: ../functions.php:415
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #: ../functions.php:416
-msgid "Edit Minimal Wedding Custom Post"
-msgstr "Minimal Wedding Custom Post bearbeiten"
+msgid "Edit Ultra Photo Custom Post"
+msgstr "Ultra Photo Custom Post bearbeiten"
 
 #: ../functions.php:417
-msgid "New Minimal Wedding Custom Post"
-msgstr "Neuer Minimal Wedding Custom Post"
+msgid "New Ultra Photo Custom Post"
+msgstr "Neuer Ultra Photo Custom Post"
 
 #: ../functions.php:418 ../functions.php:419
-msgid "View Minimal Wedding Custom Post"
-msgstr "Minimal Wedding Custom Post ansehen"
+msgid "View Ultra Photo Custom Post"
+msgstr "Ultra Photo Custom Post ansehen"
 
 #: ../functions.php:420
-msgid "Search Minimal Wedding Custom Post"
-msgstr "Minimal Wedding Custom Post suchen"
+msgid "Search Ultra Photo Custom Post"
+msgstr "Ultra Photo Custom Post suchen"
 
 #: ../functions.php:421
-msgid "No Minimal Wedding Custom Posts found"
-msgstr "Keine Minimal Wedding Custom Posts gefunden"
+msgid "No Ultra Photo Custom Posts found"
+msgstr "Keine Ultra Photo Custom Posts gefunden"
 
 #: ../functions.php:422
-msgid "No Minimal Wedding Custom Posts found in Trash"
-msgstr "Keine Minimal Wedding Custom Posts im Papierkorb gefunden"
+msgid "No Ultra Photo Custom Posts found in Trash"
+msgstr "Keine Ultra Photo Custom Posts im Papierkorb gefunden"
 
 #: ../index.php:6
 msgid "Latest Posts"

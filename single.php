@@ -19,8 +19,6 @@
 			
 			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('post-bottom-content-widget')) ?>
 
-			<?php comments_template(); ?>
-
 		</article>
 		<!-- /article -->
 
@@ -31,7 +29,7 @@
 		<!-- article -->
 		<article>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'minimalwedding' ); ?></h1>
+			<h1><?php _e( 'Sorry, nothing to display.', 'ultraPhoto' ); ?></h1>
 
 		</article>
 		<!-- /article -->
